@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cms\SiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('cms.page.Table');
+});
+
+Route::prefix('data-siswa')->controller(SiswaController::class)->group(function () {
+    Route::get('/', 'index')->name('data-siswa.index');
+    Route::post('/', 'createSiswa');
+    Route::get('/{id}', 'getSiswaId');
+    Route::patch('/{id}', 'updateSiswa');
+    Route::delete('/{id}', 'deleteSiswa');
 });
