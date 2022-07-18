@@ -23,6 +23,38 @@
     <!-- vendor css -->
     <link rel="stylesheet" href="{{ asset('cms/assets/css/style.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <style>
+        .img-table {
+            height: 35px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .btn-sm {
+            padding-top: 7px;
+        }
+
+        .btn-icon {
+            padding-top: 7px;
+            border-radius: 50%;
+        }
+
+        .link-button {
+            text-decoration: none;
+            font-size: 11pt;
+            cursor: pointer;
+            font-style: italic;
+            color: blue;
+            text-align: left;
+            transition: 0.3s;
+            padding-right: 10px;
+        }
+
+        .link-button:hover {
+            color: black;
+            font-size: 11.5pt;
+        }
+    </style>
 </head>
 
 <body class="">
