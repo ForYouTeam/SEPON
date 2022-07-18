@@ -14,9 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
     return view('cms.page.Table');
-=======
-    return view('web.layout.userweb');
->>>>>>> f00ef1cf32d36225a2ea8cc380941ca602c61820
 });
