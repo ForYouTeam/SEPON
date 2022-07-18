@@ -14,16 +14,16 @@ class WaliMuridRequest extends FormRequest
     public function rules()
     {
         return [
-            'id_user' => 'required',
-            'nik' => 'required',
-            'nama' => 'required',
-            'jk' => 'required',
+            'id_user' => 'required|integer',
+            'nik' => 'required|numeric',
+            'nama' => 'required|max:255',
+            'jk' => 'required|max:255',
             'tgl_lahir' => 'required',
-            'tempat_lahir' => 'required',
-            'agama' => 'required',
-            'pekerjaan' => 'required',
-            'status_dalam_keluarga' => 'required',
-            'alamat' => 'required',
+            'tempat_lahir' => 'required|max:255',
+            'agama' => 'required|max:255',
+            'pekerjaan' => 'required|max:255',
+            'status_dalam_keluarga' => 'required|max:255',
+            'alamat' => 'required|min:5',
             'penghasilan' => 'required',
             'path_img' => 'required',
         ];
