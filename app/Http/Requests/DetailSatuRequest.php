@@ -19,7 +19,7 @@ class DetailSatuRequest extends FormRequest
             'jumlah_saudara_kandung' => 'required',
             'jumlah_saudara_tiri' => 'required',
             'jumlah_saudara_angkat' => 'required',
-            'alamat' => 'required',
+            'alamat' => 'required|min:5',
             'hobi' => 'required',
             'bidang_studi_digemari' => 'required',
             'olahraga_digemari' => 'required',

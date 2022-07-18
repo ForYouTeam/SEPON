@@ -14,10 +14,10 @@ class DetailDuaRequest extends FormRequest
     public function rules()
     {
         return [
-            'id_pendaftaran' => 'required',
-            'id_ibu' => 'required',
-            'id_ayah' => 'required',
-            'id_wali' => 'required',
+            'id_pendaftaran' => 'required|integer',
+            'id_ibu' => 'required|integer',
+            'id_ayah' => 'required|integer',
+            'id_wali' => 'required|integer',
         ];
     }
 }
