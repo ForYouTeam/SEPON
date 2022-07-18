@@ -14,15 +14,15 @@ class DetailSatuRequest extends FormRequest
     public function rules()
     {
         return [
-            'id_pendaftaran' => 'required',
-            'anak_ke' => 'required',
-            'jumlah_saudara_kandung' => 'required',
-            'jumlah_saudara_tiri' => 'required',
-            'jumlah_saudara_angkat' => 'required',
+            'id_pendaftaran' => 'required|integer',
+            'anak_ke' => 'required|max:255',
+            'jumlah_saudara_kandung' => 'required|max:255',
+            'jumlah_saudara_tiri' => 'required|max:255',
+            'jumlah_saudara_angkat' => 'required|max:255',
             'alamat' => 'required|min:5',
-            'hobi' => 'required',
-            'bidang_studi_digemari' => 'required',
-            'olahraga_digemari' => 'required',
+            'hobi' => 'required|max:255',
+            'bidang_studi_digemari' => 'required|max:255',
+            'olahraga_digemari' => 'required|max:255',
         ];
     }
 }

@@ -15,7 +15,7 @@ class WaliMuridRequest extends FormRequest
     {
         return [
             'id_user' => 'required',
-            'nip' => 'required',
+            'nik' => 'required',
             'nama' => 'required',
             'jk' => 'required',
             'tgl_lahir' => 'required',

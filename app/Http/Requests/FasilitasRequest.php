@@ -16,7 +16,7 @@ class FasilitasRequest extends FormRequest
         return [
             'nama_ruangan' => 'required',
             'jumlah_ruangan' => 'required',
-            'deskripsi' => 'required',
+            'deskripsi' => 'required|min:15',
             'id_galeri' => 'required',
         ];
     }

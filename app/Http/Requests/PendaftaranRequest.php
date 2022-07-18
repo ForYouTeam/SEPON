@@ -14,12 +14,12 @@ class PendaftaranRequest extends FormRequest
     public function rules()
     {
         return [
-            'nama_lengkap' => 'required',
-            'nama_panggilan' => 'required',
-            'jk' => 'required',
-            'tempat_lahir' => 'required',
+            'nama_lengkap' => 'required|max:255',
+            'nama_panggilan' => 'required|max:255',
+            'jk' => 'required|max:255',
+            'tempat_lahir' => 'required|max:255',
             'tgl_lahir' => 'required',
-            'agama' => 'required',
+            'agama' => 'required|max:255',
         ];
     }
 }

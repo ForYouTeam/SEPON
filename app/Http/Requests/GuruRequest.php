@@ -14,12 +14,12 @@ class GuruRequest extends FormRequest
     public function rules()
     {
         return [
-            'nama' => 'required',
-            'nip' => 'required',
-            'jk' => 'required',
-            'gol' => 'required',
-            'jabatan' => 'required',
-            'status_nikah' => 'required',
+            'nama' => 'required|max:255',
+            'nip' => 'required|integer',
+            'jk' => 'required|max:255',
+            'gol' => 'required|max:255',
+            'jabatan' => 'required|max:255',
+            'status_nikah' => 'required|max:255',
             'path_img' => 'required',
         ];
     }
