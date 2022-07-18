@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::prefix('data-siswa')->controller(SiswaController::class)->group(function () {
     Route::get('/', 'index')->name('data-siswa.index');
     Route::post('/', 'createSiswa');
-    Route::post('/{id}', 'geteSiswaId');
+    Route::get('/{id}', 'getSiswaId');
     Route::patch('/{id}', 'updateSiswa');
     Route::delete('/{id}', 'deleteSiswa');
 });
