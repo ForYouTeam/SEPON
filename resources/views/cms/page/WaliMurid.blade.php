@@ -40,8 +40,9 @@
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-sm btn-secondary"><i
-                                                class="feather icon-camera"></i>Edit</button>
-                                        <button class="btn btn-rounded btn-sm btn-danger">x</button>
+                                                class="far fa-edit"></i>Edit</button>
+                                        <button class="btn btn-sm btn-danger"><i
+                                                class="fas fa-minus-square"></i>Hapus</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -50,54 +51,109 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-form" role="tabpanel" aria-labelledby="pills-form-tab">
-                <h5>Basic Componant</h5>
-                <h5>Form controls</h5>
-                <hr>
-                <div class="row">
-                    <div class="col-md-6">
-                        <form>
+                <blockquote class="blockquote mb-4">
+                    <p class="mb-2">Tambahkan data yang sesuai.
+                    </p>
+                    <footer class="blockquote-footer">Formulir Inputan
+                    </footer>
+                </blockquote>
+                <form id="form-simpan">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">Well never share your email with
-                                    anyone else.</small>
+                                <label>Nomor Induk KTP</label>
+                                <input name="nik" type="number" class="form-control form-control-sm" placeholder="NIK">
+                                <small id="nik-alert" class="text-alert"></small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Password">
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                    <div class="col-md-6">
-                        <form>
-                            <div class="form-group">
-                                <label>Text</label>
-                                <input type="text" class="form-control" placeholder="Text">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Example select</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                                <label>Jenis Kelamin</label>
+                                <select name="jk" class="form-control form-control-sm">
+                                    <option selected disabled>-Pilih-</option>
+                                    <option value="laki laki">Laki-Laki</option>
+                                    <option value="perempuan">Perempuan</option>
                                 </select>
+                                <small id="jk-alert" class="text-alert"></small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Example textarea</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label>Tempat Lahir</label>
+                                <input name="tempat_lahir" type="text" class="form-control form-control-sm"
+                                    placeholder="Tempat Lahir">
+                                <small id="tempat_lahir-alert" class="text-alert"></small>
                             </div>
-                        </form>
+                            <div class="form-group">
+                                <label>Pekerjaan</label>
+                                <select name="pekerjaan" class="form-control form-control-sm">
+                                    <option selected disabled>-Pilih-</option>
+                                    <option value="pns guru">PNS Guru</option>
+                                    <option value="pns abri">PNS Abri</option>
+                                    <option value="pegawai kontrak">Pegawai Kontrak</option>
+                                    <option value="wirausaha/pedagang">Wirausaha/Pedagang</option>
+                                    <option value="petani">Petani</option>
+                                    <option value="tukang">Tukang</option>
+                                    <option value="tidak bekerja">Tidak Bekerja</option>
+                                </select>
+                                <small id="pekerjaan-alert" class="text-alert"></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Penghasilan</label>
+                                <input name="penghasilan" type="number" class="form-control form-control-sm"
+                                    placeholder="Rupiah">
+                                <small id="penghasilan-alert" class="text-alert"></small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <input name="nama" type="text" class="form-control form-control-sm"
+                                    placeholder="Nama lengkap">
+                                <small id="nama-alert" class="text-alert"></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Lahir</label>
+                                <input name="tgl_lahir" type="date" class="form-control form-control-sm">
+                                <small id="tgl_lahir-alert" class="text-alert"></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Agama</label>
+                                <select name="agama" class="form-control form-control-sm">
+                                    <option selected disabled>-Pilih-</option>
+                                    <option value="islam">Islam</option>
+                                    <option value="kriten">Kristen</option>
+                                    <option value="katolik">Katolik</option>
+                                    <option value="hindu">Hindu</option>
+                                    <option value="budha">Budha</option>
+                                </select>
+                                <small id="agama-alert" class="text-alert"></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Status Dalam Keluarga</label>
+                                <select name="status_dalam_keluarga" class="form-control form-control-sm">
+                                    <option selected disabled>-Pilih-</option>
+                                    <option value="kepala keluarga">Kepala Keluarga</option>
+                                    <option value="istri">Istri</option>
+                                    <option value="saudara">Saudara</option>
+                                    <option value="wali">Wali</option>
+                                </select>
+                                <small id="status_dalam_keluarga-alert" class="text-alert"></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Upload Foto</label>
+                                <input name="path_img" type="file" class="form-control form-control-sm"
+                                    placeholder="Rupiah">
+                                <small id="path_img-alert" class="text-alert"></small>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Alamat</label>
+                                <textarea name="alamat" class="form-control" rows="3"></textarea>
+                            </div>
+                            <button type="button" id="btn-simpan" class="btn btn-primary mt-2"><i
+                                    class="far fa-paper-plane"></i>Simpan</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -106,6 +162,30 @@
     <script>
         $(document).ready(function() {
             $('#DataTable').DataTable();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        });
+
+        $(document).on('click', '#btn-simpan', function() {
+            let url = `{{ config('app.url') }}/walimurid`;
+            let data = new FormData($('#form-simpan')[0]);
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(result) {
+                    console.log(result);
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
         });
     </script>
 @endsection

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\cms\WaliMuridController;
+use App\Http\Controllers\cms\SiswaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,4 +14,11 @@ Route::prefix('walimurid')->controller(WaliMuridController::class)->group(functi
     Route::get('/{id}', 'getWaliMuridById');
     Route::patch('/{id}', 'updateWaliMurid');
     Route::delete('/{id}', 'deleteWaliMurid');
+});
+Route::prefix('data-siswa')->controller(SiswaController::class)->group(function () {
+    Route::get('/', 'index')->name('data-siswa.index');
+    Route::post('/', 'createSiswa');
+    Route::get('/{id}', 'getSiswaId');
+    Route::patch('/{id}', 'updateSiswa');
+    Route::delete('/{id}', 'deleteSiswa');
 });
