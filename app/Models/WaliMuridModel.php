@@ -11,7 +11,7 @@ class WaliMuridModel extends Model
     protected $table = "wali_murid";
     protected $fillable = [
         'id_user',
-        'nip',
+        'nik',
         'nama',
         'jk',
         'tgl_lahir',
