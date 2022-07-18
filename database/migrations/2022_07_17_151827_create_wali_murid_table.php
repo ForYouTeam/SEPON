@@ -12,7 +12,7 @@ class CreateWaliMuridTable extends Migration
         Schema::create('wali_murid', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user')->nullable()->constrained('users');
-            $table->string('nip');
+            $table->string('nik');
             $table->string('nama');
             $table->string('jk');
             $table->date('tgl_lahir');
