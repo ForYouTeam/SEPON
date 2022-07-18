@@ -12,6 +12,7 @@
     <meta name="keywords"
         content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, Flash Able, Flash Able bootstrap admin template">
     <meta name="author" content="Codedthemes" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon icon -->
     <link rel="icon" href="{{ asset('cms/assets/images/favicon.ico') }}" type="image/x-icon">
