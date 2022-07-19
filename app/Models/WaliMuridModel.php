@@ -22,7 +22,6 @@ class WaliMuridModel extends Model
         'hidup',
         'alamat',
         'penghasilan',
-        'path_img',
         'created_at',
         'updated_at',
     ];

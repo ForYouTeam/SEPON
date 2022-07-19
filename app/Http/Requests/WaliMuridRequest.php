@@ -26,7 +26,6 @@ class WaliMuridRequest extends FormRequest
             'status_dalam_keluarga' => 'required|max:255',
             'alamat' => 'required|min:5',
             'penghasilan' => 'required',
-            'path_img' => 'required',
         ];
     }
 

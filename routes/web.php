@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\cms\SiswaController;
+use App\Http\Controllers\cms\WaliMuridController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {

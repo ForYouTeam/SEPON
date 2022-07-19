@@ -24,7 +24,6 @@
     <!-- vendor css -->
     <link rel="stylesheet" href="{{ asset('cms/assets/css/style.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-<<<<<<< HEAD
     <style>
         .img-table {
             height: 35px;
@@ -57,10 +56,8 @@
             font-size: 11.5pt;
         }
     </style>
-=======
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.css"
         integrity="sha256-nXeHln6Yx1boZLM6tS50KaqgXPNsEgmHmmfXsq0bdD8=" crossorigin="anonymous">
->>>>>>> bf15355c54fb9b3fe06c6c36d06bd7ee03ba6bbd
 </head>
 
 <body class="">
@@ -108,7 +105,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <form id="form-update">
+                    <form id="form-update" style="padding: 10px 25px;">
                         @csrf
                     </form>
                 </div>
