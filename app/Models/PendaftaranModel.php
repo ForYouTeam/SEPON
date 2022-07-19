@@ -17,6 +17,9 @@ class PendaftaranModel extends Model
         'tempat_lahir',
         'tgl_lahir',
         'agama',
+        'alamat',
+        'tahun_ajaran',
+        'path_img',
         'created_at',
         'updated_at',
     ];

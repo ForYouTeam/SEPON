@@ -65,21 +65,11 @@ class WaliMuridController extends Controller
             if ($dbResult) {
                 $walimurid = array(
                     'data' => $dbResult,
-                    'response' => array(
-                        'icon' => 'success',
-                        'title' => 'Tersimpan',
-                        'message' => 'Data berhasil disimpan',
-                    ),
                     'code' => 201
                 );
             } else {
                 $walimurid = array(
                     'data' => null,
-                    'response' => array(
-                        'icon' => 'warning',
-                        'title' => 'Not Found',
-                        'message' => 'Data tidak tersedia',
-                    ),
                     'code' => 404
                 );
             }
