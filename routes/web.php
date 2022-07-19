@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cms\GuruController;
 use App\Http\Controllers\cms\SiswaController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,11 @@ Route::prefix('data-siswa')->controller(SiswaController::class)->group(function 
     Route::get('/{id}', 'getSiswaId');
     Route::patch('/{id}', 'updateSiswa');
     Route::delete('/{id}', 'deleteSiswa');
+});
+Route::prefix('guru')->controller(GuruController::class)->group(function () {
+    Route::get('/', 'index')->name('guru.index');
+    Route::post('/', 'createGuru');
+    Route::get('/{id}', 'getGuruId');
+    Route::patch('/{id}', 'updateGuru');
+    Route::delete('/{id}', 'deleteGuru');
 });

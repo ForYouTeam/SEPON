@@ -128,9 +128,9 @@
                     });
                     if (errorRes.length >= 1) {
                         $('.miniAlert').html('');
-                        $('#tahun-alert').html(errorRes.data.tahun);
-                        $('#lakilaki-alert').html(errorRes.data.lakilaki);
-                        $('#perempuan-alert').html(errorRes.data.perempuan);
+                        $.each(errorRes.data, function(i, value) {
+                            $(`#${i}-alert`).html(value);
+                        })
                     }
                 }
             });

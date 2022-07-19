@@ -17,7 +17,7 @@ class GuruRequest extends FormRequest
     {
         return [
             'nama' => 'required|max:255',
-            'nip' => 'required|integer',
+            'nip' => 'required|numeric',
             'jk' => 'required|max:255',
             'gol' => 'required|max:255',
             'jabatan' => 'required|max:255',

@@ -21,6 +21,7 @@
                         class="pcoded-mtext">Master Data</span></a>
                 <ul class="pcoded-submenu">
                     <li class=""><a href="{{route ('data-siswa.index')}}" class="">Data Siswa</a></li>
+                    <li class=""><a href="{{route ('guru.index')}}" class="">Data Guru</a></li>
                 </ul>
             </li>
         </ul>

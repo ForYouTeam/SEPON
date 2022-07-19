@@ -73,8 +73,9 @@
                 </div>
 
                 <div class="modal-body">
-                    <form id="form-update">
+                    <form id="form-update" enctype="multipart/form-data">
                         @csrf
+
                     </form>
                 </div>
 
