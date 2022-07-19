@@ -23,7 +23,56 @@
 
     <!-- vendor css -->
     <link rel="stylesheet" href="{{ asset('cms/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('cms/assets/css/yearpicker.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <style>
+        .img-table {
+            height: 35px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .btn-sm {
+            padding-top: 7px;
+        }
+
+        .btn-icon {
+            padding-top: 7px;
+            border-radius: 50%;
+        }
+
+        .link-button {
+            text-decoration: none;
+            font-size: 11pt;
+            cursor: pointer;
+            font-style: italic;
+            color: blue;
+            text-align: left;
+            transition: 0.3s;
+            padding-right: 10px;
+        }
+
+        .link-button:hover {
+            color: black;
+            font-size: 11.5pt;
+        }
+
+        .form-filter {
+            background: none;
+            height: 40px !important;
+            font-size: 11pt;
+        }
+
+        .img-profile {
+            height: 50px;
+            width: auto;
+        }
+
+        .img-profile-big {
+            height: 250px;
+            width: auto;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.css"
         integrity="sha256-nXeHln6Yx1boZLM6tS50KaqgXPNsEgmHmmfXsq0bdD8=" crossorigin="anonymous">
 </head>
@@ -73,7 +122,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <form id="form-update" enctype="multipart/form-data">
+                    <form id="form-update" style="padding: 10px 25px;">
                         @csrf
 
                     </form>
@@ -88,9 +137,12 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="{{ asset('cms/assets/js/vendor-all.min.js') }}"></script>
     <script src="{{ asset('cms/assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('cms/assets/js/pcoded.min.js') }}"></script>
+    <script src="{{ asset('cms/assets/js/yearpicker.js') }}"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.js"
         integrity="sha256-KCfGmXy9AXUQznmwX+3HaRQquw99U21swIiv67k9XEw=" crossorigin="anonymous"></script>
