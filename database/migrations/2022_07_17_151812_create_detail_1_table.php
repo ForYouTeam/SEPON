@@ -15,7 +15,6 @@ class CreateDetail1Table extends Migration
             $table->string('jumlah_saudara_kandung')->nullable();
             $table->string('jumlah_saudara_tiri')->nullable();
             $table->string('jumlah_saudara_angkat')->nullable();
-            $table->longText('alamat');
             $table->string('hobi');
             $table->string('bidang_studi_digemari');
             $table->string('olahraga_digemari');

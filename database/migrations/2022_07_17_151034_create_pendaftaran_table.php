@@ -16,6 +16,9 @@ class CreatePendaftaranTable extends Migration
             $table->string('tempat_lahir');
             $table->date('tgl_lahir');
             $table->string('agama');
+            $table->string('alamat');
+            $table->year('tahun_ajaran');
+            $table->longText('path_img');
             $table->timestamps();
         });
     }

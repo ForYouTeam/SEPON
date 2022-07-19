@@ -22,6 +22,7 @@ class PendaftaranRequest extends FormRequest
             'tempat_lahir' => 'required|max:255',
             'tgl_lahir' => 'required',
             'agama' => 'required|max:255',
+            'alamat' => 'required|min:5',
         ];
     }
 
