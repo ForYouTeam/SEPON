@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
 class WaliMuridRequest extends FormRequest
-{ 
+{
     public function authorize()
     {
         return true;
@@ -16,7 +16,6 @@ class WaliMuridRequest extends FormRequest
     public function rules()
     {
         return [
-            'id_user' => 'required|integer',
             'nik' => 'required|numeric',
             'nama' => 'required|max:255',
             'jk' => 'required|max:255',
@@ -27,7 +26,6 @@ class WaliMuridRequest extends FormRequest
             'status_dalam_keluarga' => 'required|max:255',
             'alamat' => 'required|min:5',
             'penghasilan' => 'required',
-            'path_img' => 'required',
         ];
     }
 

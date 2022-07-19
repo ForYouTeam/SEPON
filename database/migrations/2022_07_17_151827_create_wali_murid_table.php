@@ -23,7 +23,6 @@ class CreateWaliMuridTable extends Migration
             $table->boolean('hidup')->default(true);
             $table->longText('alamat');
             $table->integer('penghasilan');
-            $table->string('path_img');
             $table->timestamps();
         });
     }
