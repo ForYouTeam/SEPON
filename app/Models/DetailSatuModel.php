@@ -12,6 +12,9 @@ class DetailSatuModel extends Model
     protected $fillable = [
         'id',
         'id_pendaftaran',
+        'id_ayah',
+        'id_ibu',
+        'id_wali',
         'anak_ke',
         'jumlah_saudara_kandung',
         'jumlah_saudara_tiri',
@@ -23,8 +26,18 @@ class DetailSatuModel extends Model
         'updated_at',
     ];
 
-    public function pendaftaranRole()
+    public function ayah()
     {
-        return $this->belongsTo(PendaftaranModel::class, 'id_pendaftaran');
+        return $this->belongsTo(WaliMuridModel::class, 'id_ayah');
+    }
+
+    public function ibu()
+    {
+        return $this->belongsTo(WaliMuridModel::class, 'id_ibu');
+    }
+
+    public function wali()
+    {
+        return $this->belongsTo(WaliMuridModel::class, 'id_wali');
     }
 }

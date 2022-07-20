@@ -28,9 +28,4 @@ class PendaftaranModel extends Model
     {
         return $this->hasOne(DetailSatuModel::class, 'id_pendaftaran');
     }
-
-    public function waliMurid()
-    {
-        return $this->hasOne(DetailDuaModel::class, 'id_pendaftaran');
-    }
 }

@@ -11,6 +11,9 @@ class DetailRepository implements DetailInterfaceRepository
     {
         $data = array(
             'id_pendaftaran' => $newdetail['id_pendaftaran'],
+            'id_ayah' => $newdetail['id_ayah'],
+            'id_ibu' => $newdetail['id_ibu'],
+            'id_wali' => $newdetail['id_wali'],
             'anak_ke' => $newdetail['anak_ke'],
             'jumlah_saudara_kandung' => $newdetail['jumlah_saudara_kandung'],
             'jumlah_saudara_tiri' => $newdetail['jumlah_saudara_tiri'],
@@ -31,6 +34,9 @@ class DetailRepository implements DetailInterfaceRepository
     {
         $data = array(
             'anak_ke' => $newdetail['anak_ke'],
+            'id_ayah' => $newdetail['id_ayah'],
+            'id_ibu' => $newdetail['id_ibu'],
+            'id_wali' => $newdetail['id_wali'],
             'jumlah_saudara_kandung' => $newdetail['jumlah_saudara_kandung'],
             'jumlah_saudara_tiri' => $newdetail['jumlah_saudara_tiri'],
             'jumlah_saudara_angkat' => $newdetail['jumlah_saudara_angkat'],

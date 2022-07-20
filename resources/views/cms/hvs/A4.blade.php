@@ -104,7 +104,7 @@
         <div style="padding: 60px 50px">
             <div class="title">
                 <h3>Bukti Pendaftaran</h3>
-                <p>SD Negeri 1 Palu</p>
+                <p>SD MUHAMMADIYAH 3 PALU</p>
             </div>
             <hr />
             <div class="image">
@@ -132,6 +132,9 @@
                 <div class="detail">
                     <ul class="text-bold">
                         <li>Anak Ke</li>
+                        <li>Nama Ayah</li>
+                        <li>Nama Ibu</li>
+                        <li>Wali</li>
                         <li>Jumlah Saudara Kandung</li>
                         <li>Jumlah Saudara Tiri</li>
                         <li>Jumlah Saudara Angkat</li>
@@ -141,6 +144,10 @@
                     </ul>
                     <ul>
                         <li>: {{ $data->detailRole->anak_ke }}</li>
+                        <li>: {{ $data->ayah }}</li>
+                        <li>: {{ $data->ibu }}</li>
+                        <li>: {{ $data->wali ? $data->detailRole->wali['nama'] : 'Tidak Ada' }}
+                        </li>
                         <li>: {{ $data->detailRole->jumlah_saudara_kandung }}</li>
                         <li>: {{ $data->detailRole->jumlah_saudara_tiri }}</li>
                         <li>: {{ $data->detailRole->jumlah_saudara_angkat }}</li>
@@ -153,6 +160,8 @@
             <div style="padding-top: 20px;">
                 <p>Untuk mencetak/menyimpan dokumen ini gunakan perintah Ctrl+p kemudian pilih destination kemudian save
                     as pdf</p>
+                <br>
+                <small style="color: blue">Terdaftar di PALU pada tanggal {{ date('d-m-Y') }}</small>
             </div>
         </div>
     </page>

@@ -1,10 +1,5 @@
 <header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed">
     <div class="m-header">
-        <a class="mobile-menu" id="mobile-collapse1" href="#!"><span></span></a>
-        <a href="index.html" class="b-brand">
-            <img src="../assets/images/logo.svg" alt="" class="logo images">
-            <img src="../assets/images/logo-icon.svg" alt="" class="logo-thumb images">
-        </a>
     </div>
     <a class="mobile-menu" id="mobile-header" href="#!">
         <i class="feather icon-more-horizontal"></i>

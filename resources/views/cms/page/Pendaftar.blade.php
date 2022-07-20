@@ -43,7 +43,7 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $d)
+                                @foreach ($data['pendaftar'] as $d)
                                     <th>{{ $no++ }}</th>
                                     <th>
                                         {{ $d->nama_lengkap }}
@@ -62,7 +62,7 @@
                                         'left=20,top=20,width=800,height=1200,toolbar=1,resizable=1'); return false;"
                                             id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
                                                 class="feather icon-info"></i>
-                                            Detail</a>
+                                            Bukti Pendaftaran</a>
                                     <th>
                                         <button id="btn-edit" data-id="{{ $d->id }}" type="button"
                                             class="btn btn-sm btn-secondary"><i class="far fa-edit"></i>Edit</button>
@@ -195,14 +195,55 @@
                                 </div>
                             </div>
 
-                            <div class="form-group mt-2">
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Ayah</label>
+                                    <select name="id_ayah" class="form-control form-control-sm">
+                                        <option selected disabled>-Pilih-</option>
+                                        @foreach ($data['walimurid'] as $d)
+                                            @if ($d->status_dalam_keluarga == 'kepala keluarga')
+                                                <option value="{{ $d->id }}">{{ $d->nama }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                    <small id="id_ayah-alert" class="text-danger"></small>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Ibu</label>
+                                    <select name="id_ibu" class="form-control form-control-sm">
+                                        <option selected disabled>-Pilih-</option>
+                                        @foreach ($data['walimurid'] as $d)
+                                            @if ($d->status_dalam_keluarga == 'istri')
+                                                <option value="{{ $d->id }}">{{ $d->nama }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                    <small id="id_ibu-alert" class="text-danger"></small>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Wali</label>
+                                    <select name="id_wali" class="form-control form-control-sm">
+                                        <option selected disabled>-Pilih-</option>
+                                        <option value="">Tidak ada</option>
+                                        @foreach ($data['walimurid'] as $d)
+                                            @if ($d->status_dalam_keluarga != 'kepala keluarga' and $d->status_dalam_keluarga != 'istri')
+                                                <option value="{{ $d->id }}">{{ $d->nama }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                    <small id="id_wali-alert" class="text-danger"></small>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label>Alamat</label>
-                                <textarea name="alamat" class="form-control" rows="5"></textarea>
+                                <textarea name="alamat" class="form-control" rows="3"></textarea>
                                 <small id="alamat-alert" class="text-danger"></small>
                             </div>
                         </div>
                         <div class="col-md-12 mt-2">
-                            <button type="button" id="btn-simpan" class="btn btn-primary mt-2"><i
+                            <button type="button" id="btn-simpan" class="btn btn-primary mt-2 float-right"><i
                                     class="far fa-paper-plane"></i>Simpan</button>
                         </div>
                     </div>
@@ -331,6 +372,48 @@
                             <input type="file" name="path_img" id="" class="form-control">
                             <small id="path_img-alert2" class="text-danger"></small>
                         </div>
+
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Ayah</label>
+                                <select id="ayah" name="id_ayah" class="form-control form-control-sm">
+                                    <option selected disabled>-Pilih-</option>
+                                    @foreach ($data['walimurid'] as $d)
+                                        @if ($d->status_dalam_keluarga == 'kepala keluarga')
+                                            <option value="{{ $d->id }}">{{ $d->nama }}</option>
+                                        @endif
+                                    @endforeach
+                                </select>
+                                <small id="id_ayah-alert2" class="text-danger"></small>
+                            </div>
+
+                            <div class="form-group col">
+                                <label>Ibu</label>
+                                <select id="ibu" name="id_ibu" class="form-control form-control-sm">
+                                    <option selected disabled>-Pilih-</option>
+                                    @foreach ($data['walimurid'] as $d)
+                                        @if ($d->status_dalam_keluarga == 'istri')
+                                            <option value="{{ $d->id }}">{{ $d->nama }}</option>
+                                        @endif
+                                    @endforeach
+                                </select>
+                                <small id="id_ibu-alert2" class="text-danger"></small>
+                            </div>
+
+                            <div class="form-group col">
+                                <label>Wali</label>
+                                <select id="wali" name="id_wali" class="form-control form-control-sm">
+                                    <option selected disabled>-Pilih-</option>
+                                    <option value="">Tidak ada</option>
+                                    @foreach ($data['walimurid'] as $d)
+                                        @if ($d->status_dalam_keluarga != 'kepala keluarga' and $d->status_dalam_keluarga != 'istri')
+                                            <option value="{{ $d->id }}">{{ $d->nama }}</option>
+                                        @endif
+                                    @endforeach
+                                </select>
+                                <small id="id_wali-alert2" class="text-danger"></small>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
@@ -343,6 +426,9 @@
             `);
             $('#jk').val(data.jk);
             $('#agama').val(data.agama);
+            $('#ayah').val(data.detail.id_ayah);
+            $('#ibu').val(data.detail.id_ibu);
+            $('#wali').val(data.detail.id_wali);
         }
 
         $(document).ready(function() {
@@ -449,6 +535,7 @@
                 processData: false,
                 contentType: false,
                 success: (result) => {
+                    $('#modalUniv').modal('hide');
                     Swal.fire({
                         title: result.response.title,
                         text: result.response.message,
