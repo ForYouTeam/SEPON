@@ -23,4 +23,14 @@ class PendaftaranModel extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function detailRole()
+    {
+        return $this->hasOne(DetailSatuModel::class, 'id_pendaftaran');
+    }
+
+    public function waliMurid()
+    {
+        return $this->hasOne(DetailDuaModel::class, 'id_pendaftaran');
+    }
 }

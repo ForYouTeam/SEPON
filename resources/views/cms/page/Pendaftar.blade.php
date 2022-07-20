@@ -25,16 +25,14 @@
                                 placeholder="Pilih Tahun Ajaran: {{ date('Y') }}">
                         </div>
                     </div>
-                    <div class="" style="margin-top: 25px;">
+                    <div class="table-responsive" style="margin-top: 25px;">
                         <table class="table table-inverse" id="DataTablePendaftar">
                             <thead>
                                 <tr>
                                     <th style="width: 5px;">#</th>
-                                    <th>Nama Lengkap</th>
-                                    <th>Panggilan</th>
+                                    <th>Nama Lengkap/Panggilan</th>
                                     <th>Jenis Kelamin</th>
-                                    <th>Tempat Lahir</th>
-                                    <th>Tanggal Lahir</th>
+                                    <th>Tempat Tgl Lahir</th>
                                     <th>Agama</th>
                                     <th>Foto</th>
                                     <th style="width: 15px;">Info Lanjut</th>
@@ -47,19 +45,24 @@
                                 @endphp
                                 @foreach ($data as $d)
                                     <th>{{ $no++ }}</th>
-                                    <th>{{ $d->nama_lengkap }}</th>
-                                    <th>{{ $d->nama_panggilan }}</th>
+                                    <th>
+                                        {{ $d->nama_lengkap }}
+                                        <br>
+                                        {{ $d->nama_panggilan }}
+                                    </th>
                                     <th>{{ $d->jk }}</th>
-                                    <th>{{ $d->tempat_lahir }}</th>
-                                    <th>{{ $d->tgl_lahir }}</th>
+                                    <th>{{ $d->tempat_lahir }} {{ $d->tgl_lahir }}</th>
                                     <th>{{ $d->agama }}</th>
                                     <th>
                                         <img src="{{ asset($d->path_img) }}" class="img-profile" alt="">
                                     </th>
                                     <th>
-                                        <btn id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
+                                        <a href="{{ route('paper', $d->id) }}"
+                                            onclick="window.open(this.href, 'mywin',
+                                        'left=20,top=20,width=800,height=1200,toolbar=1,resizable=1'); return false;"
+                                            id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
                                                 class="feather icon-info"></i>
-                                            Detail</btn>
+                                            Detail</a>
                                     <th>
                                         <button id="btn-edit" data-id="{{ $d->id }}" type="button"
                                             class="btn btn-sm btn-secondary"><i class="far fa-edit"></i>Edit</button>
@@ -83,7 +86,7 @@
                 <form style="margin-top: 25px;" id="form-tambah">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="padding-right: 3%;">
                             <div class="form-group">
                                 <label>Nama Lengkap</label>
                                 <input name="nama_lengkap" type="text" class="form-control form-control-sm"
@@ -114,8 +117,7 @@
                                     placeholder="Tempat Lahir">
                                 <small id="tempat_lahir-alert" class="text-danger"></small>
                             </div>
-                        </div>
-                        <div class="col-md-6">
+
                             <div class="form-group">
                                 <label>Tanggal Lahir</label>
                                 <input name="tgl_lahir" type="date" class="form-control form-control-sm">
@@ -141,12 +143,65 @@
                                 <small id="path_img-alert" class="text-danger"></small>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6" style="padding-left: 3%;">
                             <div class="form-group">
+                                <label>Anak Ke</label>
+                                <input name="anak_ke" type="text" class="form-control form-control-sm"
+                                    placeholder="Anak Ke">
+                                <small id="anak_ke-alert" class="text-danger"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Hobi</label>
+                                <input name="hobi" type="text" class="form-control form-control-sm"
+                                    placeholder="Hobi">
+                                <small id="hobi-alert" class="text-danger"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Bidang Studi Yang Digemari</label>
+                                <input name="bidang_studi_digemari" type="text" class="form-control form-control-sm"
+                                    placeholder="Bidang Studi Yang Digemari">
+                                <small id="bidang_studi_digemari-alert" class="text-danger"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Olah Raga Yang Digemari</label>
+                                <input name="olahraga_digemari" type="text" class="form-control form-control-sm"
+                                    placeholder="Olah Raga Yang Digemari">
+                                <small id="olahraga_digemari-alert" class="text-danger"></small>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Saudara Kandung</label>
+                                    <input name="jumlah_saudara_kandung" type="text"
+                                        class="form-control form-control-sm" placeholder="Jumlah Saudara Kandung">
+                                    <small id="jumlah_saudara_kandung-alert" class="text-danger"></small>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Saudara Tiri</label>
+                                    <input name="jumlah_saudara_tiri" type="text" class="form-control form-control-sm"
+                                        placeholder="Jumlah Saudara Tiri">
+                                    <small id="jumlah_saudara_tiri-alert" class="text-danger"></small>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Saudara Angkat</label>
+                                    <input name="jumlah_saudara_angkat" type="text"
+                                        class="form-control form-control-sm" placeholder="Jumlah Saudara Angkat">
+                                    <small id="jumlah_saudara_angkat-alert" class="text-danger"></small>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-2">
                                 <label>Alamat</label>
-                                <textarea name="alamat" class="form-control" rows="3"></textarea>
+                                <textarea name="alamat" class="form-control" rows="5"></textarea>
                                 <small id="alamat-alert" class="text-danger"></small>
                             </div>
+                        </div>
+                        <div class="col-md-12 mt-2">
                             <button type="button" id="btn-simpan" class="btn btn-primary mt-2"><i
                                     class="far fa-paper-plane"></i>Simpan</button>
                         </div>
@@ -207,6 +262,34 @@
                                 value="${data.tgl_lahir}">
                             <small id="tgl_lahir-alert2" class="text-danger"></small>
                         </div>
+
+                        <div class="form-group">
+                            <label>Anak Ke</label>
+                            <input name="anak_ke" type="text" class="form-control form-control-sm"
+                                placeholder="Anak Ke" value="${data.detail.anak_ke}">
+                            <small id="anak_ke-alert2" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Hobi</label>
+                            <input name="hobi" type="text" class="form-control form-control-sm"
+                                placeholder="Hobi"  value="${data.detail.hobi}">
+                            <small id="hobi-alert2" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Bidang Studi Yang Digemari</label>
+                            <input name="bidang_studi_digemari" type="text" class="form-control form-control-sm"
+                                placeholder="Bidang Studi Yang Digemari" value="${data.detail.bidang_studi_digemari}">
+                            <small id="bidang_studi_digemari-alert2" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Olah Raga Yang Digemari</label>
+                            <input name="olahraga_digemari" type="text" class="form-control form-control-sm"
+                                placeholder="Olah Raga Yang Digemari" value="${data.detail.olahraga_digemari}">
+                            <small id="olahraga_digemari-alert2" class="text-danger"></small>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
@@ -220,6 +303,27 @@
                                 <option value="budha">Budha</option>
                             </select>
                             <small id="agama-alert2" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Saudara Kandung</label>
+                            <input name="jumlah_saudara_kandung" type="text"
+                                class="form-control form-control-sm" placeholder="Jumlah Saudara Kandung" value="${data.detail.jumlah_saudara_kandung}">
+                            <small id="jumlah_saudara_kandung-alert2" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Saudara Tiri</label>
+                            <input name="jumlah_saudara_tiri" type="text" class="form-control form-control-sm"
+                                placeholder="Jumlah Saudara Tiri" value="${data.detail.jumlah_saudara_tiri}">
+                            <small id="jumlah_saudara_tiri-alert2" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Saudara Angkat</label>
+                            <input name="jumlah_saudara_angkat" type="text"
+                                class="form-control form-control-sm" placeholder="Jumlah Saudara Angkat" value="${data.detail.jumlah_saudara_angkat}">
+                            <small id="jumlah_saudara_angkat-alert2" class="text-danger"></small>
                         </div>
 
                         <div class="form-group">

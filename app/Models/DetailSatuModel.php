@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class DetailSatuModel extends Model
 {
     use HasFactory;
-    protected $table = '';
+    protected $table = 'detail_1';
     protected $fillable = [
         'id',
         'id_pendaftaran',
@@ -16,7 +16,6 @@ class DetailSatuModel extends Model
         'jumlah_saudara_kandung',
         'jumlah_saudara_tiri',
         'jumlah_saudara_angkat',
-        'alamat',
         'hobi',
         'bidang_studi_digemari',
         'olahraga_digemari',
