@@ -33,3 +33,5 @@ Route::prefix('pendaftar')->controller(PendaftranController::class)->group(funct
     Route::post('/{id}', 'updatePendaftar');
     Route::delete('/{id}', 'deletePendaftar');
 });
+
+Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->name('paper');
