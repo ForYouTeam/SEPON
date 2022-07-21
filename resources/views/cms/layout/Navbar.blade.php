@@ -10,14 +10,14 @@
                 <label>Navigation</label>
             </li>
             <li class="nav-item active">
-                <a href="index.html" class="nav-link"><span class="pcoded-micon"><i
+                <a href="{{route ('dashboard.index')}}" class="nav-link"><span class="pcoded-micon"><i
                             class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
             </li>
             <li class="nav-item pcoded-menu-caption">
                 <label>Master Data</label>
             </li>
             <li class="nav-item pcoded-hasmenu">
-                <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span
+                <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-folder"></i></span><span
                         class="pcoded-mtext">Master Data</span></a>
                 <ul class="pcoded-submenu">
                     <li class=""><a href="{{ route('data-siswa.index') }}" class="">Data Siswa</a></li>

@@ -1,595 +1,197 @@
 @extends('cms.layout.TemplateAdmin')
 @section('content')
 <div class="row">
-
-    <!-- product profit start -->
-    <div class="col-xl-3 col-md-6">
-        <div class="card prod-p-card bg-c-red">
-            <div class="card-body">
-                <div class="row align-items-center m-b-25">
-                    <div class="col">
-                        <h6 class="m-b-5 text-white">Total Profit</h6>
-                        <h3 class="m-b-0 text-white">$1,783</h3>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-money-bill-alt text-c-red f-18"></i>
-                    </div>
-                </div>
-                <p class="m-b-0 text-white"><span class="label label-danger m-r-10">+11%</span>From Previous Month</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-md-6">
-        <div class="card prod-p-card bg-c-blue">
-            <div class="card-body">
-                <div class="row align-items-center m-b-25">
-                    <div class="col">
-                        <h6 class="m-b-5 text-white">Total Orders</h6>
-                        <h3 class="m-b-0 text-white">15,830</h3>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-database text-c-blue f-18"></i>
-                    </div>
-                </div>
-                <p class="m-b-0 text-white"><span class="label label-primary m-r-10">+12%</span>From Previous Month
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-md-6">
-        <div class="card prod-p-card bg-c-green">
-            <div class="card-body">
-                <div class="row align-items-center m-b-25">
-                    <div class="col">
-                        <h6 class="m-b-5 text-white">Average Price</h6>
-                        <h3 class="m-b-0 text-white">$6,780</h3>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-dollar-sign text-c-green f-18"></i>
-                    </div>
-                </div>
-                <p class="m-b-0 text-white"><span class="label label-success m-r-10">+52%</span>From Previous Month
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-md-6">
-        <div class="card prod-p-card bg-c-yellow">
-            <div class="card-body">
-                <div class="row align-items-center m-b-25">
-                    <div class="col">
-                        <h6 class="m-b-5 text-white">Product Sold</h6>
-                        <h3 class="m-b-0 text-white">6,784</h3>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-tags text-c-yellow f-18"></i>
-                    </div>
-                </div>
-                <p class="m-b-0 text-white"><span class="label label-warning m-r-10">+52%</span>From Previous Month
-                </p>
-            </div>
-        </div>
+    <div class="col-12 mb-3">
+        <img src="{{ asset('img/2.jpeg') }}" alt="" style="width: 100%;">
     </div>
     <!-- sessions-section start -->
-    <div class="col-xl-8 col-md-6">
+    <div class="col-xl-12 col-md-12">
         <div class="card table-card">
             <div class="card-header">
-                <h5>Site visitors session log</h5>
+                <h5>Profil SD Muhammadiyah 3 Palu</h5>
             </div>
-            <div class="card-body px-0 py-0">
-                <div class="table-responsive">
-                    <div class="session-scroll" style="height:478px;position:relative;">
-                        <table class="table table-hover m-b-0">
-                            <thead>
-                                <tr>
-                                    <th><span>CAMPAIGN DATE</span></th>
-                                    <th><span>CLICK <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                    <th><span>COST <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                    <th><span>CTR <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                    <th><span>ARPU <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                    <th><span>ECPI <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                    <th><span>ROI <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                    <th><span>REVENUE <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                    <th><span>CONVERSIONS <a class="help" data-toggle="popover" title="Popover title"
-                                                data-content="And here's some amazing content. It's very engaging. Right?"><i
-                                                    class="feather icon-help-circle f-16"></i></a></span>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Total and average</td>
-                                    <td>1300</td>
-                                    <td>1025</td>
-                                    <td>14005</td>
-                                    <td>95,3%</td>
-                                    <td>29,7%</td>
-                                    <td>3,25</td>
-                                    <td>2:30</td>
-                                    <td>45.5%</td>
-                                </tr>
-                                <tr>
-                                    <td>8-11-2016</td>
-                                    <td>786
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+            <ol type="A">
+                <li class="mt-3 mb-4">Identitas Sekolah
+                    <div class="card-body px-0 py-0 mb-5">
+                        <form class="form-group mt-4 mb-3" class="m-4 p-2" id="form-simpan">
+                            @csrf
+                            <ol type="1" style="margin-left: -30px;">
+                                <li>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Nama Sekolah</label>
+                                        <div class="col-sm-8">
+                                            <input type="hidden" class="form-control" name="id"
+                                                value="{{$data['profile']->id ? $data['profile']->id : ""}}">
+                                            <input type="text" class="form-control" name="nama_sekolah"
+                                                value="{{$data['profile'] ? $data['profile']->nama_sekolah : ""}}">
+                                            <small class="text-danger" id="nama_sekolah-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>485
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
-                                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Alamat</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" name="alamat"
+                                                aria-label="With textarea">{{$data['profile'] ? $data['profile']->alamat : ""}}</textarea>
+                                            <small class="text-danger" id="alamat-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>769
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Desa</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="desa"
+                                                value="{{$data['profile'] ? $data['profile']->desa : ""}}">
+                                            <small class="text-danger" id="desa-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>45,3%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Kecamatan</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="kecamatan"
+                                                value="{{$data['profile'] ? $data['profile']->kecamatan : ""}}">
+                                            <small class="text-danger" id="kecamatan-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>6,7%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-info rounded" role="progressbar"
-                                                style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Kabupaten</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="kabupaten"
+                                                value="{{$data['profile'] ? $data['profile']->kabupaten : ""}}">
+                                            <small class="text-danger" id="kabupaten-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>8,56
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Provinsi</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="provinsi"
+                                                value="{{$data['profile'] ? $data['profile']->provinsi : ""}}">
+                                            <small class="text-danger" id="provinsi-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>10:55
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Nomor Telepon</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="telepon"
+                                                value="{{$data['profile'] ? $data['profile']->telepon : ""}}">
+                                            <small class="text-danger" id="telepon-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>33.8%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Nama Yayasan</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="nama_yayasan"
+                                                value="{{$data['profile'] ? $data['profile']->nama_yayasan : ""}}">
+                                            <small class="text-danger" id="nama_yayasan-alert"></small>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>15-10-2016</td>
-                                    <td>786
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 65%;" aria-valuenow="65" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Status Sekolah</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="status_sekolah"
+                                                value="{{$data['profile'] ? $data['profile']->status_sekolah : ""}}">
+                                            <small class="text-danger" id="status_sekolah-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>523
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
-                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Nama Kepala Sekolah</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control"
+                                                value="{{$data['guru'] ? $data['guru']->nama : ""}}">
+                                            <input type="hidden" name="nama_kepala_sekolah"
+                                                value="{{$data['guru'] ? $data['guru']->id : ""}}">
+                                            <small class="text-danger" id="nama_kepala_sekolah-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>736
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Visi</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" name="visi"
+                                                aria-label="With textarea">{{$data['profile'] ? $data['profile']->visi : ""}}</textarea>
+                                            <small class="text-danger" id="visi-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>78,3%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Misi</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" name="misi"
+                                                aria-label="With textarea">{{$data['profile'] ? $data['profile']->misi : ""}}</textarea>
+                                            <small class="text-danger" id="misi-alert"></small>
                                         </div>
-                                    </td>
-                                    <td>6,6%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-info rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>7,56
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 44%;" aria-valuenow="44" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>4:30
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 68%;" aria-valuenow="68" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>76.8%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>8-8-2017</td>
-                                    <td>624
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 45%;" aria-valuenow="45" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>436
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
-                                                style="width: 55%;" aria-valuenow="55" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>756
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>78,3%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 38%;" aria-valuenow="38" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>6,4%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-info rounded" role="progressbar"
-                                                style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>9,45
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 41%;" aria-valuenow="41" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>9:05
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 67%;" aria-valuenow="67" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>8.63%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 41%;" aria-valuenow="41" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11-12-2017</td>
-                                    <td>423
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 54%;" aria-valuenow="54" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>123
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>756
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>78,6%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>45,6%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-info rounded" role="progressbar"
-                                                style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>6,85
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>7:45
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>33.8%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>8-11-2016</td>
-                                    <td>786
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>485
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
-                                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>769
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>45,3%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>6,7%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-info rounded" role="progressbar"
-                                                style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>8,56
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>10:55
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>33.8%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>15-10-2016</td>
-                                    <td>786
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 65%;" aria-valuenow="65" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>523
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
-                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>736
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>78,3%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>6,6%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-info rounded" role="progressbar"
-                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>7,56
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 44%;" aria-valuenow="44" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>4:30
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 68%;" aria-valuenow="68" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>76.8%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>8-8-2017</td>
-                                    <td>624
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 45%;" aria-valuenow="45" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>436
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
-                                                style="width: 55%;" aria-valuenow="55" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>756
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>78,3%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 38%;" aria-valuenow="38" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>6,4%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-info rounded" role="progressbar"
-                                                style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>9,45
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-danger rounded" role="progressbar"
-                                                style="width: 41%;" aria-valuenow="41" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>9:05
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-warning rounded" role="progressbar"
-                                                style="width: 67%;" aria-valuenow="67" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td>8.63%
-                                        <div class="progress mt-1" style="height:4px;">
-                                            <div class="progress-bar bg-success rounded" role="progressbar"
-                                                style="width: 41%;" aria-valuenow="41" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </div>
+                                    <div class="mt-2 float-right mr-5 mb-5 ">
+                                        <button type="button" id="btn-simpan" class="btn btn-primary mr-4"><i
+                                                class="feather icon-save"></i>Simpan</button>
+                                    </div>
+                                </li>
+                            </ol>
+                        </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- sessions-section end -->
-    <div class="col-md-6 col-xl-4">
-        <div class="card user-card">
-            <div class="card-header">
-                <h5>Profile</h5>
-            </div>
-            <div class="card-body  text-center">
-                <div class="usre-image">
-                    <img src="../assets/images/widget/img-round1.jpg" class="img-radius wid-100 m-auto"
-                        alt="User-Profile-Image">
-                </div>
-                <h6 class="f-w-600 m-t-25 m-b-10">Alessa Robert</h6>
-                <p>Active | Male | Born 23.05.1992</p>
-                <hr>
-                <p class="m-t-15">Activity Level: 87%</p>
-                <div class="bg-c-blue counter-block m-t-10 p-20">
-                    <div class="row">
-                        <div class="col-4">
-                            <i class="fas fa-calendar-check text-white f-20"></i>
-                            <h6 class="text-white mt-2 mb-0">1256</h6>
-                        </div>
-                        <div class="col-4">
-                            <i class="fas fa-user text-white f-20"></i>
-                            <h6 class="text-white mt-2 mb-0">8562</h6>
-                        </div>
-                        <div class="col-4">
-                            <i class="fas fa-folder-open text-white f-20"></i>
-                            <h6 class="text-white mt-2 mb-0">189</h6>
-                        </div>
-                    </div>
-                </div>
-                <p class="m-t-15">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.</p>
-                <hr>
-                <div class="row justify-content-center user-social-link">
-                    <div class="col-auto"><a href="#!"><i class="fab fa-facebook-f text-primary f-22"></i></a></div>
-                    <div class="col-auto"><a href="#!"><i class="fab fa-twitter text-c-info f-22"></i></a></div>
-                    <div class="col-auto"><a href="#!"><i class="fab fa-dribbble text-c-red f-22"></i></a></div>
-                </div>
-            </div>
+                </li>
+            </ol>
         </div>
     </div>
 </div>
+@endsection
+@section('js')
+<script>
+    $(document).ready( function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $('#DataTable').DataTable();
+
+        $(document).on('click', '#btn-simpan', function() {
+            let url = `{{ config('app.url') }}` + "/profile";
+            let data = $('#form-simpan').serialize();
+            $('#btn-simpan').prop('disabled', true);
+            $.ajax({
+                url: url,
+                method: "POST",
+                data: data,
+                success: function(result) {
+                    console.log(result);
+                    Swal.fire({
+                        title: result.response.title,
+                        text: result.response.message,
+                        icon: result.response.icon,
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Oke'
+                    }).then((result) => {
+                        location.reload();
+                    });
+                },
+                error: function(result) {
+                    $('#btn-simpan').prop('disabled', false);
+                    let data = result.responseJSON
+                    let errorRes = data.errors
+                    Swal.fire({
+                        icon: data.response.icon,
+                        title: data.response.title,
+                        text: data.response.message,
+                    });
+                    if (errorRes.length >= 1) {
+                        $('.miniAlert').html('');
+                        $.each(errorRes.data, function(i, value) {
+                            $(`#${i}-alert`).html(value);
+                        });
+                    }
+                }
+            });
+        });
+    } );
+</script>
 @endsection
