@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cms\DashboardController;
 use App\Http\Controllers\cms\FasilitasController;
 use App\Http\Controllers\cms\GaleriController;
 use App\Http\Controllers\cms\GuruController;
@@ -8,11 +9,12 @@ use App\Http\Controllers\cms\SiswaController;
 use App\Http\Controllers\cms\WaliMuridController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('cms.page.Table');
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+
+Route::prefix('profile')->controller(DashboardController::class)->group(function () {
+    Route::post('/', 'createProfile');
 });
-
-
 Route::prefix('walimurid')->controller(WaliMuridController::class)->group(function () {
     Route::get('/', 'getAllWaliMurid')->name('walimurid.index');
     Route::post('/', 'createWaliMurid');
