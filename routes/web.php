@@ -34,4 +34,13 @@ Route::prefix('pendaftar')->controller(PendaftranController::class)->group(funct
     Route::delete('/{id}', 'deletePendaftar');
 });
 
+
+Route::prefix('guru')->controller(GuruController::class)->group(function () {
+    Route::get('/', 'index')->name('guru.index');
+    Route::post('/', 'createGuru');
+    Route::get('/data/{id}', 'getGuruId');
+    Route::post('/{id}', 'updateGuru');
+    Route::delete('/{id}', 'deleteGuru');
+});
+
 Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->name('paper');
