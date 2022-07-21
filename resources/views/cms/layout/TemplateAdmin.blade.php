@@ -78,34 +78,28 @@
 </head>
 
 <body class="">
-    <!-- [ Pre-loader ] start -->
+
     <div class="loader-bg">
         <div class="loader-track">
             <div class="loader-fill"></div>
         </div>
     </div>
-    <!-- [ Pre-loader ] End -->
 
-    <!-- [ navigation menu ] start -->
     <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
         @include('cms.layout.Navbar')
     </nav>
-    <!-- [ navigation menu ] end -->
 
-    <!-- [ Header ] start -->
     @include('cms.layout.Topbar')
-    <!-- [ Header ] end -->
 
-    <!-- [ Main Content ] start -->
     <div class="pcoded-main-container">
         <div class="pcoded-wrapper">
             <div class="pcoded-content">
                 <div class="pcoded-inner-content">
                     <div class="main-body">
                         <div class="page-wrapper">
-                            <!-- [ Main Content ] start -->
+
                             @yield('content')
-                            <!-- [ Main Content ] end -->
+
                         </div>
                     </div>
                 </div>
@@ -127,7 +121,6 @@
                     </form>
                 </div>
 
-                <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" id="btn-update">Kirim</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
