@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cms\FasilitasController;
 use App\Http\Controllers\cms\GaleriController;
 use App\Http\Controllers\cms\GuruController;
 use App\Http\Controllers\cms\PendaftranController;
@@ -51,6 +52,14 @@ Route::prefix('galeri')->controller(GaleriController::class)->group(function () 
     Route::get('/data/{id}', 'getGaleriId');
     Route::post('/{id}', 'updateGaleri');
     Route::delete('/{id}', 'deleteGaleri');
+});
+
+Route::prefix('fasilitas')->controller(FasilitasController::class)->group(function () {
+    Route::get('/', 'index')->name('fasilitas.index');
+    Route::post('/', 'createFasilitas');
+    Route::get('/{id}', 'getFasilitasId');
+    Route::patch('/{id}', 'updateFasilitas');
+    Route::delete('/{id}', 'deleteFasilitas');
 });
 
 Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->name('paper');

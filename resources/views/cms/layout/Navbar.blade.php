@@ -24,6 +24,7 @@
                     <li class=""><a href="{{ route('guru.index') }}" class="">Data Guru</a></li>
                     <li class=""><a href="{{ route('walimurid.index') }}" class="">Data Wali Murid</a></li>
                     <li class=""><a href="{{ route('pendaftar.index') }}" class="">Data Pendaftar</a></li>
+                    <li class=""><a href="{{ route('fasilitas.index') }}" class="">Fasilitas</a></li>
                 </ul>
             </li>
             <li class="nav-item">
