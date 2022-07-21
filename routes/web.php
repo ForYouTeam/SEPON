@@ -6,6 +6,7 @@ use App\Http\Controllers\cms\GuruController;
 use App\Http\Controllers\cms\PendaftranController;
 use App\Http\Controllers\cms\SiswaController;
 use App\Http\Controllers\cms\WaliMuridController;
+use App\Http\Controllers\web\PendaftaranSiswaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,7 +16,9 @@ Route::get('/', function () {
 Route::prefix('auth')->controller(AuthController::class)->group(function () {
     Route::get('login', 'login')->name('login');
     Route::get('logout', 'logout')->name('logout');
+    Route::get('register', 'register')->name('register');
     Route::post('login/process', 'loginProcess')->name('login.process');
+    Route::post('register/process', 'registerProcess')->name('register.process');
 });
 Route::middleware(['auth', 'role:super-admin'])->group(function () {
 
@@ -68,3 +71,7 @@ Route::middleware(['auth', 'role:super-admin'])->group(function () {
     });
 });
 Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->middleware('auth')->name('paper');
+
+Route::prefix('user')->controller(PendaftaranSiswaController::class)->group(function () {
+    Route::get('/pendaftaran_siswa', 'index')->name('pendaftaran_siswa.index');
+});
