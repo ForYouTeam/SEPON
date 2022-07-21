@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cms\GuruController;
 use App\Http\Controllers\cms\PendaftranController;
 use App\Http\Controllers\cms\SiswaController;
 use App\Http\Controllers\cms\WaliMuridController;
