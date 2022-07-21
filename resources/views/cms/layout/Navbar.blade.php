@@ -1,6 +1,6 @@
 <div class="navbar-wrapper ">
     <div class="navbar-brand header-logo">
-        <img src="{{ asset('cms/assets/images/logo.svg') }}" alt="" class="logo images">
+        <span style="color: white; line-height: 19px; font-size: 14pt;">SD Muhammadiyah <br> 3 Palu Profile Web</span>
         <img src="{{ asset('cms/assets/images/logo-icon.svg') }}" alt="" class="logo-thumb images">
         <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
     </div>
@@ -22,6 +22,8 @@
                 <ul class="pcoded-submenu">
                     <li class=""><a href="{{route ('data-siswa.index')}}" class="">Data Siswa</a></li>
                     <li class=""><a href="{{route ('guru.index')}}" class="">Data Guru</a></li>
+                    <li class=""><a href="{{ route('walimurid.index') }}" class="">Data Wali Murid</a></li>
+                    <li class=""><a href="{{ route('pendaftar.index') }}" class="">Data Pendaftar</a></li>
                 </ul>
             </li>
         </ul>

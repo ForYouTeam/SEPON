@@ -4,17 +4,30 @@ namespace App\Http\Controllers\cms;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PendaftaranRequest;
+use App\Interfaces\DetailInterfaceRepository;
+use App\Models\DetailSatuModel;
 use App\Models\PendaftaranModel;
+use App\Models\WaliMuridModel;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
 class PendaftranController extends Controller
 {
+    private DetailInterfaceRepository $detailRepo;
+
+    public function __construct(DetailInterfaceRepository $detailRepo)
+    {
+        $this->detailRepo = $detailRepo;
+    }
+
     public function index()
     {
         $years = Carbon::now()->format('Y');
-        $data = PendaftaranModel::where('tahun_ajaran', $years)->get();
+        $data = array(
+            'pendaftar' => PendaftaranModel::where('tahun_ajaran', $years)->get(),
+            'walimurid' => WaliMuridModel::select(['id', 'nama', 'status_dalam_keluarga'])->get()
+        );
         return view('cms.page.Pendaftar')->with('data', $data);
     }
 
@@ -66,6 +79,7 @@ class PendaftranController extends Controller
         $filepath = 'storage/pendaftar/';
         $data['path_img'] = $filepath . '/' . $filename;
         $data['tahun_ajaran'] = $years;
+
         try {
             $dbResult = PendaftaranModel::create($data);
             $pendaftar = array(
@@ -78,6 +92,10 @@ class PendaftranController extends Controller
                 'code' => 201
             );
             $file->move($filepath, $filename);
+
+            $detail = $request->all();
+            $detail['id_pendaftaran'] = $dbResult->id;
+            $this->detailRepo->create($detail);
         } catch (\Throwable $th) {
             $pendaftar = array(
                 'data' => null,
@@ -97,6 +115,7 @@ class PendaftranController extends Controller
     {
         try {
             $dbResult = PendaftaranModel::whereId($id)->first();
+            $dbResult->detail = DetailSatuModel::where('id_pendaftaran', $dbResult->id)->first();
             if ($dbResult) {
                 $pendaftar = array(
                     'data' => $dbResult,
@@ -156,6 +175,7 @@ class PendaftranController extends Controller
                 ),
                 'code' => 201
             );
+            $this->detailRepo->update($id, $request->all());
         } catch (\Throwable $th) {
             $pendaftar = array(
                 'data' => null,
@@ -176,6 +196,7 @@ class PendaftranController extends Controller
         $oldimg = $dbcon->value('path_img');
         try {
             if ($dbcon->first()) {
+                $this->detailRepo->delete($id);
                 File::delete(public_path($oldimg));
                 $pendaftar = array(
                     'data' => $dbcon->delete(),
@@ -209,5 +230,20 @@ class PendaftranController extends Controller
             );
         }
         return response()->json($pendaftar, $pendaftar['code']);
+    }
+
+    public function buktiPendaftaran($id)
+    {
+        $dbResult = PendaftaranModel::whereId($id)->with('detailRole')->first();
+        $dbcon = new WaliMuridModel;
+        $walimurid = array(
+            'ayah' => $dbcon->whereId($dbResult->detailRole->id_ayah)->value('nama'),
+            'ibu' => $dbcon->whereId($dbResult->detailRole->id_ibu)->value('nama'),
+            'wali' => $dbcon->whereId($dbResult->detailRole->wali)->value('nama'),
+        );
+        foreach ($walimurid as $key => $value) {
+            $dbResult->$key = $value;
+        }
+        return view('cms.hvs.A4')->with('data', $dbResult);
     }
 }

@@ -42,3 +42,4 @@ Route::prefix('guru')->controller(GuruController::class)->group(function () {
     Route::post('/{id}', 'updateGuru');
     Route::delete('/{id}', 'deleteGuru');
 });
+Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->name('paper');
