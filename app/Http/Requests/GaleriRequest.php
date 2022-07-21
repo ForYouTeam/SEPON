@@ -16,7 +16,6 @@ class GaleriRequest extends FormRequest
     public function rules()
     {
         return [
-            'path_file' => 'required',
             'deskripsi' => 'required|min:15',
             'jenis' => 'required',
         ];

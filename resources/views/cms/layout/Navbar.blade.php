@@ -17,11 +17,18 @@
                 <label>Master Data</label>
             </li>
             <li class="nav-item pcoded-hasmenu">
-                <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                            class="feather icon-box"></i></span><span class="pcoded-mtext">Master Data</span></a>
+                <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span
+                        class="pcoded-mtext">Master Data</span></a>
                 <ul class="pcoded-submenu">
                     <li class=""><a href="{{ route('data-siswa.index') }}" class="">Data Siswa</a></li>
+                    <li class=""><a href="{{ route('guru.index') }}" class="">Data Guru</a></li>
+                    <li class=""><a href="{{ route('walimurid.index') }}" class="">Data Wali Murid</a></li>
+                    <li class=""><a href="{{ route('pendaftar.index') }}" class="">Data Pendaftar</a></li>
                 </ul>
+            </li>
+            <li class="nav-item">
+                <a href="{{route ('galeri.index')}}" class="nav-link"><span class="pcoded-micon"><i
+                            class="feather icon-camera"></i></span><span class="pcoded-mtext">Galeri</span></a>
             </li>
         </ul>
     </div>
