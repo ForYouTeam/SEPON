@@ -1,165 +1,165 @@
 @extends('cms.layout.TemplateAdmin')
 @section('content')
-    <div class="col-sm-12">
-        <h5 class="mt-4">Data Pendaftar</h5>
-        <hr>
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="pills-table-tab" data-toggle="pill" href="#pills-table" role="tab"
-                    aria-controls="pills-table" aria-selected="true">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-form-tab" data-toggle="pill" href="#pills-form" role="tab"
-                    aria-controls="pills-form" aria-selected="false">Profile</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h5>Tabel Data</h5>
-                        </div>
-                        <div class="col-md-4 float-right">
-                            <input type="text" id="years-regist" class="form-control form-filter"
-                                placeholder="Pilih Tahun Ajaran: {{ date('Y') }}">
-                        </div>
+<div class="col-sm-12">
+    <h5 class="mt-4">Data Pendaftar</h5>
+    <hr>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-table-tab" data-toggle="pill" href="#pills-table" role="tab"
+                aria-controls="pills-table" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-form-tab" data-toggle="pill" href="#pills-form" role="tab"
+                aria-controls="pills-form" aria-selected="false">Profile</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5>Tabel Data</h5>
                     </div>
-                    <div class="" style="margin-top: 25px;">
-                        <table class="table table-inverse" id="DataTablePendaftar">
-                            <thead>
-                                <tr>
-                                    <th style="width: 5px;">#</th>
-                                    <th>Nama Lengkap</th>
-                                    <th>Panggilan</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Tempat Lahir</th>
-                                    <th>Tanggal Lahir</th>
-                                    <th>Agama</th>
-                                    <th>Foto</th>
-                                    <th style="width: 15px;">Info Lanjut</th>
-                                    <th style="width: 20px;">Opsi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @php
-                                    $no = 1;
-                                @endphp
-                                @foreach ($data as $d)
-                                    <th>{{ $no++ }}</th>
-                                    <th>{{ $d->nama_lengkap }}</th>
-                                    <th>{{ $d->nama_panggilan }}</th>
-                                    <th>{{ $d->jk }}</th>
-                                    <th>{{ $d->tempat_lahir }}</th>
-                                    <th>{{ $d->tgl_lahir }}</th>
-                                    <th>{{ $d->agama }}</th>
-                                    <th>
-                                        <img src="{{ asset($d->path_img) }}" class="img-profile" alt="">
-                                    </th>
-                                    <th>
-                                        <btn id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
-                                                class="feather icon-info"></i>
-                                            Detail</btn>
-                                    <th>
-                                        <button id="btn-edit" data-id="{{ $d->id }}" type="button"
-                                            class="btn btn-sm btn-secondary"><i class="far fa-edit"></i>Edit</button>
-                                        <button id="btn-hapus" data-id="{{ $d->id }}"
-                                            class="btn btn-sm btn-danger"><i class="fas fa-minus-square"></i>Hapus</button>
-                                    </th>
-                                @endforeach
-                            </tbody>
-                        </table>
+                    <div class="col-md-4 float-right">
+                        <input type="text" id="years-regist" class="form-control form-filter"
+                            placeholder="Pilih Tahun Ajaran: {{ date('Y') }}">
                     </div>
                 </div>
+                <div class="" style="margin-top: 25px;">
+                    <table class="table table-inverse" id="DataTablePendaftar">
+                        <thead>
+                            <tr>
+                                <th style="width: 5px;">#</th>
+                                <th>Nama Lengkap</th>
+                                <th>Panggilan</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Tempat Lahir</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Agama</th>
+                                <th>Foto</th>
+                                <th style="width: 15px;">Info Lanjut</th>
+                                <th style="width: 20px;">Opsi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                            $no = 1;
+                            @endphp
+                            @foreach ($data as $d)
+                            <th>{{ $no++ }}</th>
+                            <th>{{ $d->nama_lengkap }}</th>
+                            <th>{{ $d->nama_panggilan }}</th>
+                            <th>{{ $d->jk }}</th>
+                            <th>{{ $d->tempat_lahir }}</th>
+                            <th>{{ $d->tgl_lahir }}</th>
+                            <th>{{ $d->agama }}</th>
+                            <th>
+                                <img src="{{ asset($d->path_img) }}" class="img-profile" alt="">
+                            </th>
+                            <th>
+                                <btn id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
+                                        class="feather icon-info"></i>
+                                    Detail</btn>
+                            <th>
+                                <button id="btn-edit" data-id="{{ $d->id }}" type="button"
+                                    class="btn btn-sm btn-secondary"><i class="far fa-edit"></i>Edit</button>
+                                <button id="btn-hapus" data-id="{{ $d->id }}" class="btn btn-sm btn-danger"><i
+                                        class="fas fa-minus-square"></i>Hapus</button>
+                            </th>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="tab-pane fade" id="pills-form" role="tabpanel" aria-labelledby="pills-form-tab"
-                style="padding: 3% 4%;">
-                <blockquote class="blockquote mb-4">
-                    <p class="mb-2">Tambahkan data yang sesuai.
-                    </p>
-                    <footer class="blockquote-footer">Formulir Inputan
-                    </footer>
-                </blockquote>
-                <form style="margin-top: 25px;" id="form-tambah">
-                    @csrf
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Nama Lengkap</label>
-                                <input name="nama_lengkap" type="text" class="form-control form-control-sm"
-                                    placeholder="Nama Lengkap">
-                                <small id="nama_lengkap-alert" class="text-danger"></small>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Nama Panggilan</label>
-                                <input name="nama_panggilan" type="text" class="form-control form-control-sm"
-                                    placeholder="Nama Panggilan">
-                                <small id="nama_panggilan-alert" class="text-danger"></small>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Jenis Kelamin</label>
-                                <select name="jk" class="form-control form-control-sm">
-                                    <option selected disabled>-Pilih-</option>
-                                    <option value="laki laki">Laki-Laki</option>
-                                    <option value="perempuan">Perempuan</option>
-                                </select>
-                                <small id="jk-alert" class="text-danger"></small>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Tempat Lahir</label>
-                                <input name="tempat_lahir" type="text" class="form-control form-control-sm"
-                                    placeholder="Tempat Lahir">
-                                <small id="tempat_lahir-alert" class="text-danger"></small>
-                            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-form" role="tabpanel" aria-labelledby="pills-form-tab"
+            style="padding: 3% 4%;">
+            <blockquote class="blockquote mb-4">
+                <p class="mb-2">Tambahkan data yang sesuai.
+                </p>
+                <footer class="blockquote-footer">Formulir Inputan
+                </footer>
+            </blockquote>
+            <form style="margin-top: 25px;" id="form-tambah">
+                @csrf
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input name="nama_lengkap" type="text" class="form-control form-control-sm"
+                                placeholder="Nama Lengkap">
+                            <small id="nama_lengkap-alert" class="text-danger"></small>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Tanggal Lahir</label>
-                                <input name="tgl_lahir" type="date" class="form-control form-control-sm">
-                                <small id="tgl_lahir-alert" class="text-danger"></small>
-                            </div>
 
-                            <div class="form-group">
-                                <label>Agama</label>
-                                <select name="agama" class="form-control form-control-sm">
-                                    <option selected disabled>-Pilih-</option>
-                                    <option value="islam">Islam</option>
-                                    <option value="kriten">Kristen</option>
-                                    <option value="katolik">Katolik</option>
-                                    <option value="hindu">Hindu</option>
-                                    <option value="budha">Budha</option>
-                                </select>
-                                <small id="agama-alert" class="text-danger"></small>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Upload Foto</label>
-                                <input type="file" name="path_img" id="" class="form-control">
-                                <small id="path_img-alert" class="text-danger"></small>
-                            </div>
+                        <div class="form-group">
+                            <label>Nama Panggilan</label>
+                            <input name="nama_panggilan" type="text" class="form-control form-control-sm"
+                                placeholder="Nama Panggilan">
+                            <small id="nama_panggilan-alert" class="text-danger"></small>
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Alamat</label>
-                                <textarea name="alamat" class="form-control" rows="3"></textarea>
-                                <small id="alamat-alert" class="text-danger"></small>
-                            </div>
-                            <button type="button" id="btn-simpan" class="btn btn-primary mt-2"><i
-                                    class="far fa-paper-plane"></i>Simpan</button>
+
+                        <div class="form-group">
+                            <label>Jenis Kelamin</label>
+                            <select name="jk" class="form-control form-control-sm">
+                                <option selected disabled>-Pilih-</option>
+                                <option value="laki laki">Laki-Laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                            <small id="jk-alert" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tempat Lahir</label>
+                            <input name="tempat_lahir" type="text" class="form-control form-control-sm"
+                                placeholder="Tempat Lahir">
+                            <small id="tempat_lahir-alert" class="text-danger"></small>
                         </div>
                     </div>
-                </form>
-            </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Tanggal Lahir</label>
+                            <input name="tgl_lahir" type="date" class="form-control form-control-sm">
+                            <small id="tgl_lahir-alert" class="text-danger"></small>
+                        </div>
 
+                        <div class="form-group">
+                            <label>Agama</label>
+                            <select name="agama" class="form-control form-control-sm">
+                                <option selected disabled>-Pilih-</option>
+                                <option value="islam">Islam</option>
+                                <option value="kriten">Kristen</option>
+                                <option value="katolik">Katolik</option>
+                                <option value="hindu">Hindu</option>
+                                <option value="budha">Budha</option>
+                            </select>
+                            <small id="agama-alert" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Upload Foto</label>
+                            <input type="file" name="path_img" id="" class="form-control">
+                            <small id="path_img-alert" class="text-danger"></small>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Alamat</label>
+                            <textarea name="alamat" class="form-control" rows="3"></textarea>
+                            <small id="alamat-alert" class="text-danger"></small>
+                        </div>
+                        <button type="button" id="btn-simpan" class="btn btn-primary mt-2"><i
+                                class="far fa-paper-plane"></i>Simpan</button>
+                    </div>
+                </div>
+            </form>
         </div>
+
     </div>
+</div>
 @endsection
 @section('js')
-    <script>
-        const form = (data) => {
+<script>
+    const form = (data) => {
             $('#form-update').append(`
                 <div class="row">
                     <input name="id" value="${data.id}" type="hidden">
@@ -415,5 +415,5 @@
                 }
             })
         });
-    </script>
+</script>
 @endsection

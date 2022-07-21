@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cms\GuruController;
 use App\Http\Controllers\cms\PendaftranController;
 use App\Http\Controllers\cms\SiswaController;
 use App\Http\Controllers\cms\WaliMuridController;
@@ -37,7 +38,7 @@ Route::prefix('pendaftar')->controller(PendaftranController::class)->group(funct
 Route::prefix('guru')->controller(GuruController::class)->group(function () {
     Route::get('/', 'index')->name('guru.index');
     Route::post('/', 'createGuru');
-    Route::get('/{id}', 'getGuruId');
-    Route::patch('/{id}', 'updateGuru');
+    Route::get('/data/{id}', 'getGuruId');
+    Route::post('/{id}', 'updateGuru');
     Route::delete('/{id}', 'deleteGuru');
 });

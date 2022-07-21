@@ -22,7 +22,6 @@ class GuruRequest extends FormRequest
             'gol' => 'required|max:255',
             'jabatan' => 'required|max:255',
             'status_nikah' => 'required|max:255',
-            'path_img' => 'required',
         ];
     }
     protected function failedValidation(Validator $validator)
