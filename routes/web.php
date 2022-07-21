@@ -58,5 +58,13 @@ Route::middleware(['auth', 'role:super-admin'])->group(function () {
         Route::post('/{id}', 'updateGaleri');
         Route::delete('/{id}', 'deleteGaleri');
     });
+
+    Route::prefix('fasilitas')->controller(FasilitasController::class)->group(function () {
+        Route::get('/', 'index')->name('fasilitas.index');
+        Route::post('/', 'createFasilitas');
+        Route::get('/{id}', 'getFasilitasId');
+        Route::patch('/{id}', 'updateFasilitas');
+        Route::delete('/{id}', 'deleteFasilitas');
+    });
 });
 Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->middleware('auth')->name('paper');
