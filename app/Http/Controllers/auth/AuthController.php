@@ -29,14 +29,13 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            switch (Auth::user()->role) {
-                case 'super-admin':
-                    return redirect('/')->with('status', 'Berhasil Login');
-                    break;
+            $userid = Auth::user()->id;
+            $user = User::whereId($userid)->role('super-admin')->first();
 
-                default:
-                    return redirect(route('pendaftaran_siswa.index'));
-                    break;
+            if ($user) {
+                return redirect('/')->with('status', 'Berhasil Login');
+            } else {
+                return redirect(route('pendaftaran_siswa.index'));
             }
         }
 
