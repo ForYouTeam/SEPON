@@ -11,13 +11,6 @@ use App\Http\Controllers\cms\WaliMuridController;
 use App\Http\Controllers\web\PendaftaranSiswaController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
-
-
-Route::prefix('profile')->controller(DashboardController::class)->group(function () {
-    Route::post('/', 'createProfile');
-});
-
 Route::prefix('auth')->controller(AuthController::class)->group(function () {
     Route::get('login', 'login')->name('login');
     Route::get('logout', 'logout')->name('logout');
@@ -26,6 +19,11 @@ Route::prefix('auth')->controller(AuthController::class)->group(function () {
     Route::post('register/process', 'registerProcess')->name('register.process');
 });
 Route::middleware(['auth', 'role:super-admin'])->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+    Route::prefix('profile')->controller(DashboardController::class)->group(function () {
+        Route::post('/', 'createProfile');
+    });
 
     Route::prefix('walimurid')->controller(WaliMuridController::class)->group(function () {
         Route::get('/', 'getAllWaliMurid')->name('walimurid.index');
