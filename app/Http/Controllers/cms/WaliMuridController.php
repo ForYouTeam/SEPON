@@ -19,6 +19,7 @@ class WaliMuridController extends Controller
 
     public function createWaliMurid(WaliMuridRequest $request)
     {
+        return response()->json($request->all());
         try {
             $data = $request->only([
                 'nik',

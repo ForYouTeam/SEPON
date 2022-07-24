@@ -75,6 +75,7 @@ Route::middleware(['auth', 'role:super-admin'])->group(function () {
 });
 Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->middleware('auth')->name('paper');
 
-Route::prefix('user')->controller(PendaftaranSiswaController::class)->group(function () {
+Route::prefix('user')->controller(PendaftaranSiswaController::class)->middleware(['auth', 'role:super-admin|user'])->group(function () {
     Route::get('/pendaftaran_siswa', 'index')->name('pendaftaran_siswa.index');
+    Route::post('/pendaftaran_process', 'createWaliMurid');
 });
