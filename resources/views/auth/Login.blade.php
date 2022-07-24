@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Flash Able - Most Trusted Admin Template</title>
+    <title>{{ config('app.name') }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -57,7 +57,7 @@
                                 <input name="password" type="password" class="form-control" placeholder="Password">
                             </div>
                             <button class="btn btn-primary mb-4">Login</button>
-                            <a href="{{ route('register') }}" class="btn btn-light mb-4">Daftar?</a>
+                            <a href="{{ route('auth.register') }}" class="btn btn-light mb-4">Daftar?</a>
                             <p class="mb-2 text-muted">Lupa Password? <span>Hub: Admin</span></p>
                         </div>
                     </form>

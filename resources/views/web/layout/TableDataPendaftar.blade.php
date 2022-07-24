@@ -1,6 +1,7 @@
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">Data Siswa</h3>
+
     </div>
     <div class="card-body">
         @foreach ($data['siswa'] as $d)
@@ -16,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <p class="text-muted">Panggilan</p>
-                        <h5 class="mt-min-2">{{ $d->pendaftar->panggilan }}</h5>
+                        <h5 class="mt-min-2">{{ $d->pendaftar->nama_panggilan }}</h5>
 
                     </div>
                     <div class="form-group">
@@ -50,6 +51,13 @@
             </div>
             <hr>
         @endforeach
+        <div class="row mb-4">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <button id="btn-tambah-siswa" type="button" class="btn btn-sm btn-primary mt-4 mb-4">Tambah
+                    Siswa</button>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4" style="padding: 0px 10px">

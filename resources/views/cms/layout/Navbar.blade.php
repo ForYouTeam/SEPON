@@ -36,7 +36,7 @@
             @role('user')
                 <li class="nav-item">
                     <a href="{{ route('pendaftaran_siswa.index') }}" class="nav-link"><span class="pcoded-micon"><i
-                                class="feather icon-home"></i></span><span class="pcoded-mtext">Data Orang Tua</span></a>
+                                class="feather icon-home"></i></span><span class="pcoded-mtext">Data Siswa</span></a>
                 </li>
             @endrole
         </ul>
