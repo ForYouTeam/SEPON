@@ -7,6 +7,7 @@ use App\Http\Requests\ProfilRequest;
 use App\Models\GuruModel;
 use App\Models\ProfilModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class DashboardController extends Controller
 {
@@ -30,7 +31,6 @@ class DashboardController extends Controller
             'telepon',
             'nama_yayasan',
             'status_sekolah',
-            'nama_kepala_sekolah',
             'visi',
             'misi',
         ]);
@@ -52,6 +52,38 @@ class DashboardController extends Controller
                 ),
                 'code' => 201
             );
+        } catch (\Throwable $th) {
+            $profile = array(
+                'data' => null,
+                'response' => array(
+                    'icon' => 'error',
+                    'title' => 'Gagal',
+                    'message' => $th->getMessage(),
+                ),
+                'code' => 500
+            );
+        }
+
+        return response()->json($profile, $profile['code']);
+    }
+
+    public function getProfileId($id_Profile)
+    {
+        try {
+            $dbResult = ProfilModel::whereId($id_Profile)->first();
+            $dbResult->kepala_sekolah = GuruModel::where('jabatan', 'Kepala Sekolah')->select('nama')->first();
+            
+            if ($dbResult) {
+                $profile = array(
+                    'data' => $dbResult,
+                    'code' => 201
+                );
+            } else {
+                $profile = array(
+                    'data' => null,
+                    'code' => 404
+                );
+            }
         } catch (\Throwable $th) {
             $profile = array(
                 'data' => null,
