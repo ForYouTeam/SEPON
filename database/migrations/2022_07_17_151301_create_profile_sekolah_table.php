@@ -19,7 +19,7 @@ class CreateProfileSekolahTable extends Migration
             $table->string('telepon');
             $table->string('nama_yayasan');
             $table->string('status_sekolah');
-            $table->foreignId('nama_kepala_sekolah')->constrained('guru');
+            $table->foreignId('nama_kepala_sekolah')->nullable()->constrained('guru');
             $table->longText('visi');
             $table->longText('misi');
             $table->timestamps();

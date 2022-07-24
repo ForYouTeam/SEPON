@@ -25,7 +25,6 @@ class ProfilRequest extends FormRequest
             'telepon' => 'required|max:255',
             'nama_yayasan' => 'required|max:255',
             'status_sekolah' => 'required|max:255',
-            'nama_kepala_sekolah' => 'required|integer',
             'visi' => 'required',
             'misi' => 'required',
         ];
