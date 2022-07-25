@@ -33,7 +33,7 @@ class AuthController extends Controller
             $user = User::whereId($userid)->role('super-admin')->first();
 
             if ($user) {
-                return redirect('/')->with('status', 'Berhasil Login');
+                return redirect('/dashboard')->with('status', 'Berhasil Login');
             } else {
                 return redirect(route('pendaftaran_siswa.index'));
             }
