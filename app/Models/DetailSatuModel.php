@@ -25,6 +25,10 @@ class DetailSatuModel extends Model
         'created_at',
         'updated_at',
     ];
+    public function pendaftar()
+    {
+        return $this->belongsTo(PendaftaranModel::class, 'id_pendaftaran');
+    }
 
     public function ayah()
     {

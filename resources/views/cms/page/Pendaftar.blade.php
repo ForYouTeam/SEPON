@@ -221,20 +221,6 @@
                                     </select>
                                     <small id="id_ibu-alert" class="text-danger"></small>
                                 </div>
-
-                                <div class="form-group col">
-                                    <label>Wali</label>
-                                    <select name="id_wali" class="form-control form-control-sm">
-                                        <option selected disabled>-Pilih-</option>
-                                        <option value="">Tidak ada</option>
-                                        @foreach ($data['walimurid'] as $d)
-                                            @if ($d->status_dalam_keluarga != 'kepala keluarga' and $d->status_dalam_keluarga != 'istri')
-                                                <option value="{{ $d->id }}">{{ $d->nama }}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
-                                    <small id="id_wali-alert" class="text-danger"></small>
-                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Alamat</label>

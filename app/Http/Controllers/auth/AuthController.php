@@ -55,7 +55,7 @@ class AuthController extends Controller
         return redirect(route('login'))->with('status', 'Logout berhasil');
     }
 
-    public function register()
+    public function registerAccount()
     {
         return view('auth.Register');
     }
@@ -71,7 +71,7 @@ class AuthController extends Controller
             $user['password'] = Hash::make($request->password);
             $result = User::create($user);
             $result->assignRole('user');
-            return redirect()->back()->with('status', 'Akun berhasil dibuat');
+            return back()->with('status', 'Akun berhasil dibuat');
         } catch (\Throwable $th) {
             return redirect()->back()->with('status', $th->getMessage());
         }

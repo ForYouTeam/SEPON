@@ -72,6 +72,40 @@
             height: 250px;
             width: auto;
         }
+
+        .step-icon {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 25px;
+            grid-row-gap: 0px;
+        }
+
+        .mt-min-2 {
+            margin-top: -12px;
+        }
+
+        .mt-min-4 {
+            margin-top: -18px;
+        }
+
+        .empity-data {
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .form-regist {
+                padding: 5% 15% 10%;
+            }
+
+            .step-icon {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 50px;
+                grid-row-gap: 0px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.css"
         integrity="sha256-nXeHln6Yx1boZLM6tS50KaqgXPNsEgmHmmfXsq0bdD8=" crossorigin="anonymous">

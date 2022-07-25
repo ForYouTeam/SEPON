@@ -25,7 +25,6 @@
                                     <th>Nik</th>
                                     <th>Nama</th>
                                     <th>Jk</th>
-                                    <th style="width: 30px;">info</th>
                                     <th style="width: 20px;">Aksi</th>
                                 </tr>
                             </thead>
@@ -39,11 +38,6 @@
                                         <td>{{ $d->nik }}</td>
                                         <td>{{ $d->nama }}</td>
                                         <td>{{ $d->jk }}</td>
-                                        <td>
-                                            <btn id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
-                                                    class="feather icon-info"></i>
-                                                Detail</btn>
-                                        </td>
                                         <td>
                                             <button id="btn-edit" data-id="{{ $d->id }}" type="button"
                                                 class="btn btn-sm btn-secondary"><i class="far fa-edit"></i>Edit</button>

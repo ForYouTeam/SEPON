@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('auth')->controller(AuthController::class)->group(function () {
     Route::get('login', 'login')->name('login');
     Route::get('logout', 'logout')->name('logout');
-    Route::get('register', 'register')->name('register');
+    Route::get('register_account', 'registerAccount')->name('auth.register');
     Route::post('login/process', 'loginProcess')->name('login.process');
     Route::post('register/process', 'registerProcess')->name('register.process');
 });
@@ -43,15 +43,6 @@ Route::middleware(['auth', 'role:super-admin'])->group(function () {
         Route::delete('/{id}', 'deleteSiswa');
     });
 
-    Route::prefix('pendaftar')->controller(PendaftranController::class)->group(function () {
-        Route::get('/', 'index')->name('pendaftar.index');
-        Route::post('/', 'createPendaftar');
-        Route::get('/filter/{id}', 'filterYears');
-        Route::get('/data/{id}', 'getPendaftarId');
-        Route::post('/{id}', 'updatePendaftar');
-        Route::delete('/{id}', 'deletePendaftar');
-    });
-
     Route::prefix('guru')->controller(GuruController::class)->group(function () {
         Route::get('/', 'index')->name('guru.index');
         Route::post('/', 'createGuru');
@@ -76,8 +67,19 @@ Route::middleware(['auth', 'role:super-admin'])->group(function () {
         Route::delete('/{id}', 'deleteFasilitas');
     });
 });
-Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->middleware('auth')->name('paper');
 
-Route::prefix('user')->controller(PendaftaranSiswaController::class)->group(function () {
+
+Route::prefix('pendaftar')->controller(PendaftranController::class)->middleware(['auth', 'role:super-admin|user'])->group(function () {
+    Route::get('/', 'index')->name('pendaftar.index');
+    Route::post('/', 'createPendaftar');
+    Route::get('/filter/{id}', 'filterYears');
+    Route::get('/data/{id}', 'getPendaftarId');
+    Route::post('/{id}', 'updatePendaftar');
+    Route::delete('/{id}', 'deletePendaftar');
+});
+
+Route::get('detail_profile/{id}', [PendaftranController::class, 'buktiPendaftaran'])->middleware('auth')->name('paper');
+Route::prefix('user')->controller(PendaftaranSiswaController::class)->middleware(['auth', 'role:super-admin|user'])->group(function () {
     Route::get('/pendaftaran_siswa', 'index')->name('pendaftaran_siswa.index');
+    Route::post('/pendaftaran_process', 'createWaliMurid');
 });
