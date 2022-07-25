@@ -37,15 +37,23 @@
                         <h5 class="mt-min-2">{{ $d->pendaftar->tempat_lahir }} {{ $d->pendaftar->tgl_lahir }}</h5>
 
                     </div>
-                    <div class="form-group mt-4">
+                    <div class="form-group">
                         <p class="text-muted">Agama</p>
                         <h5 class="mt-min-2">{{ $d->pendaftar->agama }}</h5>
 
                     </div>
-                    <div class="form-group mt-4">
+                    <div class="form-group">
                         <p class="text-muted">Status</p>
                         <h5 class="mt-min-2 text-success">Terdaftar</h5>
                         <i class="fas fa-check-circle text-success"></i>
+                    </div>
+                    <div class="form-group">
+                        <a href="{{ route('paper', $d->id) }}"
+                            onclick="window.open(this.href, 'mywin',
+                        'left=20,top=20,width=800,height=1200,toolbar=1,resizable=1'); return false;"
+                            id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
+                                class="feather icon-info"></i>
+                            Bukti Pendaftaran</a>
                     </div>
                 </div>
             </div>

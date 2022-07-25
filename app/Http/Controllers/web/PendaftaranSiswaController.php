@@ -19,7 +19,6 @@ class PendaftaranSiswaController extends Controller
         if ($data) {
             $siswa['siswa'] =  DetailSatuModel::where('id_ayah', $data->id)
                 ->orWhere('id_ibu', $data->id)
-                ->orWhere('id_wali', $data->id)
                 ->with('pendaftar')
                 ->get();
 

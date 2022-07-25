@@ -22,7 +22,10 @@ Route::middleware(['auth', 'role:super-admin'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 
     Route::prefix('profile')->controller(DashboardController::class)->group(function () {
+        Route::post('/', 'index')->name('dashboard.index');
         Route::post('/', 'createProfile');
+        Route::get('/data', 'getProfile');
+        Route::get('/data/{id}', 'getProfileId');
     });
 
     Route::prefix('walimurid')->controller(WaliMuridController::class)->group(function () {

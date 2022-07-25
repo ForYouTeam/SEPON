@@ -13,7 +13,6 @@ class CreateDetail1Table extends Migration
             $table->foreignId('id_pendaftaran')->constrained('pendaftaran');
             $table->foreignId('id_ayah')->constrained('wali_murid');
             $table->foreignId('id_ibu')->constrained('wali_murid');
-            $table->foreignId('id_wali')->nullable()->constrained('wali_murid');
             $table->string('anak_ke');
             $table->string('jumlah_saudara_kandung');
             $table->string('jumlah_saudara_tiri');

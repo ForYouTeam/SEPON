@@ -89,6 +89,10 @@
             margin-top: -18px;
         }
 
+        .empity-data {
+            text-align: center;
+        }
+
         @media (min-width: 768px) {
             .form-regist {
                 padding: 5% 15% 10%;

@@ -11,7 +11,7 @@
             </li>
             @role('super-admin')
                 <li class="nav-item active">
-                    <a href="#" class="nav-link"><span class="pcoded-micon"><i
+                    <a href="{{ route('dashboard.index') }}" class="nav-link"><span class="pcoded-micon"><i
                                 class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                 </li>
                 <li class="nav-item pcoded-menu-caption">
