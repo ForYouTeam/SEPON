@@ -25,6 +25,7 @@ class DashboardController extends Controller
             'jumlahguru' => GuruModel::count(),
             'fasilitas' => FasilitasModel::select('fasilitas')->count(),
             'profile' => ProfilModel::first(),
+            'kepalasekolah' => GuruModel::where('jabatan', 'Kepala Sekolah')->select(array('id', 'nama'))->first()
         );
         // return response()->json($data);
         return view('cms.page.Dashboard')->with('data', $data);

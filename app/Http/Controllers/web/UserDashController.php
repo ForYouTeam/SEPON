@@ -14,9 +14,9 @@ class UserDashController extends Controller
     public function index()
     {
         $data = array(
-            'profile' => ProfilModel::all(), 
+            'profile' => ProfilModel::first() ? ProfilModel::first() : null, 
             'guru' => GuruModel::limit('4')->get(), 
-            'fasilitas' => FasilitasModel::all(), 
+            'fasilitas' => FasilitasModel::limit('6')->select(array('nama_ruangan','deskripsi'))->get(), 
             'galeri' => GaleriModel::all(), 
         );
         return view('web.layout.userweb')->with('data', $data);
