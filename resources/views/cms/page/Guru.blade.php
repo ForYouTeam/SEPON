@@ -100,6 +100,9 @@
                         <label>Golongan</label>
                         <select name="gol" class="form-control">
                             <option selected disabled>Pilih Golongan</option>
+                            <option value="GTT">GTT</option>
+                            <option value="GBN">GBN</option>
+                            <option value="GHD">GHD</option>
                             <option value="IV/e">IV/e</option>
                             <option value="IV/d">IV/d</option>
                             <option value="IV/c">IV/c</option>
@@ -219,6 +222,9 @@
                         <label>Golongan</label>
                         <select name="gol" id="gol" class="form-control">
                             <option selected disabled>Pilih Golongan</option>
+                            <option value="GTT">GTT</option>
+                            <option value="GBN">GBN</option>
+                            <option value="GHD">GHD</option>
                             <option value="IV/e">IV/e</option>
                             <option value="IV/d">IV/d</option>
                             <option value="IV/c">IV/c</option>

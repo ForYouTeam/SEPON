@@ -74,15 +74,13 @@
                 <div class="header-bottom header-sticky">
                     <!-- Logo -->
                     <div class="logo d-none d-lg-block">
-                        <a href="index.html"><img src="{{ asset('web/assets/img/logo/logo.png') }}"
-                                alt=""></a>
+                        <a href="index.html"><img src="{{ asset('web/assets/img/logo/logo.png') }}" alt=""></a>
                     </div>
                     <div class="container">
                         <div class="menu-wrapper">
                             <!-- Logo -->
                             <div class="logo logo2 d-block d-lg-none">
-                                <a href="index.html"><img src="{{ asset('web/assets/img/logo/logo.png') }}"
-                                        alt=""></a>
+                                <a href="index.html"><img src="{{ asset('web/assets/img/logo/logo.png') }}" alt=""></a>
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-lg-block">
@@ -144,9 +142,8 @@
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-5">
-                                <div class="hero-man d-none d-lg-block f-right" data-animation="jello"
-                                    data-delay=".4s">
-                                    <img src="{{ asset('web/assets/img/hero/heroman.png') }}" alt="">
+                                <div class="hero-man d-none d-lg-block f-right" data-animation="jello" data-delay=".4s">
+                                    <img src="{{ asset('img/2.jpeg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -169,8 +166,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-5">
-                                <div class="hero-man d-none d-lg-block f-right" data-animation="jello"
-                                    data-delay=".4s">
+                                <div class="hero-man d-none d-lg-block f-right" data-animation="jello" data-delay=".4s">
                                     <img src="{{ asset('web/assets/img/hero/heroman.png') }}" alt="">
                                 </div>
                             </div>
@@ -284,7 +280,8 @@
         </div>
         <!-- Categories Area End -->
         <!--? Count Down Start -->
-        <div class="count-down-area pt-90 pb-60 section-bg" data-background="{{ asset('web/assets/img/gallery/section_bg01.png') }}">
+        <div class="count-down-area pt-90 pb-60 section-bg"
+            data-background="{{ asset('web/assets/img/gallery/section_bg01.png') }}">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12 col-md-12">
@@ -345,221 +342,39 @@
             </div>
         </div>
         <!-- Count Down End -->
-        <!--? Popular Course Start -->
-        <div class="popular-course section-padding30">
-            <div class="container">
-                <div class="row justify-content-sm-center">
-                    <div class="cl-xl-7 col-lg-8 col-md-10">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-70">
-                            <span>Most Popular Course Of This Week</span>
-                            <h2>Our Popular Course</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <!-- Single course -->
-                        <div class="single-course mb-40">
-                            <div class="course-img">
-                                <img src="{{ asset('web/assets/img/gallery/popular_sub1.png') }}" alt="">
-                            </div>
-                            <div class="course-caption">
-                                <div class="course-cap-top">
-                                    <h4><a href="#">Graphic Design</a></h4>
-                                </div>
-                                <div class="course-cap-mid d-flex justify-content-between">
-                                    <div class="course-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <ul>
-                                        <li>52 Review</li>
-                                    </ul>
-                                </div>
-                                <div class="course-cap-bottom d-flex justify-content-between">
-                                    <ul>
-                                        <li><i class="ti-user"></i> 562</li>
-                                        <li><i class="ti-heart"></i> 562</li>
-                                    </ul>
-                                    <span>Free</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <!-- Single course -->
-                        <div class="single-course mb-40">
-                            <div class="course-img">
-                                <img src="{{ asset('web/assets/img/gallery/popular_sub2.png') }}" alt="">
-                            </div>
-                            <div class="course-caption">
-                                <div class="course-cap-top">
-                                    <h4><a href="#">Web Development</a></h4>
-                                </div>
-                                <div class="course-cap-mid d-flex justify-content-between">
-                                    <div class="course-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <ul>
-                                        <li>52 Review</li>
-                                    </ul>
-                                </div>
-                                <div class="course-cap-bottom d-flex justify-content-between">
-                                    <ul>
-                                        <li><i class="ti-user"></i> 562</li>
-                                        <li><i class="ti-heart"></i> 562</li>
-                                    </ul>
-                                    <span>Free</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <!-- Single course -->
-                        <div class="single-course mb-40">
-                            <div class="course-img">
-                                <img src="{{ asset('web/assets/img/gallery/popular_sub3.png') }}" alt="">
-                            </div>
-                            <div class="course-caption">
-                                <div class="course-cap-top">
-                                    <h4><a href="#">Digital Marketing</a></h4>
-                                </div>
-                                <div class="course-cap-mid d-flex justify-content-between">
-                                    <div class="course-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <ul>
-                                        <li>52 Review</li>
-                                    </ul>
-                                </div>
-                                <div class="course-cap-bottom d-flex justify-content-between">
-                                    <ul>
-                                        <li><i class="ti-user"></i> 562</li>
-                                        <li><i class="ti-heart"></i> 562</li>
-                                    </ul>
-                                    <span>Free</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Section Button -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="browse-btn2 text-center mt-50">
-                            <a href="courses.html" class="btn">Find More Courses</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Popular Course End -->
         <!--? Team Ara Start -->
-        <div class="team-area pt-160 pb-160 section-bg" data-background="{{ asset('web/assets/img/gallery/section_bg02.png') }}">
+        <div class="team-area pt-160 pb-160 section-bg"
+            data-background="{{ asset('web/assets/img/gallery/section_bg02.png') }}">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="cl-xl-7 col-lg-8 col-md-10">
                         <!-- Section Tittle -->
                         <div class="section-tittle section-tittle2 text-center mb-70">
-                            <span>More About Our Faculty</span>
-                            <h2>Our Best Teachers</h2>
+                            <span>Tentang Sekolah Kami</span>
+                            <h2>Guru Terbaik Kami</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
+                    @foreach ($data['guru'] as $d)
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-team mb-30">
                             <div class="team-img">
-                                <img src="{{ asset('web/assets/img/gallery/team1.png') }}" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
+                                <img src="{{ asset($d->path_img) }}" alt="" style="height: 350px;">
                             </div>
                             <div class="team-caption">
-                                <h3><a href="instructor.html">Alexa Janathon</a></h3>
-                                <p>Faculty</p>
+                                <h3>{{$d->nama}}</h3>
+                                <p>{{$d->jabatan}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('web/assets/img/gallery/team2.png') }}" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="instructor.html">Janathon Smith</a></h3>
-                                <p>Faculty</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('web/assets/img/gallery/team3.png') }}" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="instructor.html">Alexa MacCalum</a></h3>
-                                <p>Faculty</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="{{ asset('web/assets/img/gallery/team4.png') }}" alt="">
-                                <!-- Blog Social -->
-                                <ul class="team-social">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="instructor.html">Alexa j Watson</a></h3>
-                                <p>Faculty</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Section Button -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="browse-btn2 text-center mt-70">
-                            <a href="instructor.html" class="btn white-btn">View All Faculty</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
         <!-- Team Ara End -->
         <!--? About Law Start-->
+        @foreach ($data['profile'] as $d)
         <div class="about-area section-padding2">
             <div class="container">
                 <div class="row">
@@ -567,36 +382,38 @@
                         <div class="about-caption mb-50">
                             <!-- Section Tittle -->
                             <div class="section-tittle mb-35">
-                                <span>More About Our Company</span>
-                                <h2>Want to know more</h2>
+                                <span>Tentang Sekolah Kami</span>
+                                <h2>Profile Sekolah</h2>
                             </div>
-                            <p>There arge many variations ohf passages of sorem gpsum ilable, but the majority have
-                                suffered alteration in some form, by ected humour, or randomised words whi.</p>
+                            <p>Sebagaimana yang tercantum dalam Undang-Undang UU Nomor 20 Tahun 2003 pada Bab II Pasal 3
+                                bahwa Pendidikan Nasional bertujuan untuk berkembangnya potensi peserta didik agar
+                                menjadi manusia yang beriman dan bertakwa kepada Tuhan Yang Maha Esa, berakhlak mulia,
+                                sehat, berilmu, cakap, kreatif, mandiri, dan menjadi warga negara yang demokratis serta
+                                bertanggung jawab.</p>
                             <ul>
-                                <li><span class="flaticon-business"></span> Creative ideas base</li>
-                                <li><span class="flaticon-communications-1"></span> Assages of sorem gpsum ilable</li>
-                                <li><span class="flaticon-graduated"></span> Have suffered alteration in so</li>
-                                <li><span class="flaticon-tools-and-utensils"></span> Randomised words whi</li>
+                                <li><span class="flaticon-business"></span>
+                                    {{$d->alamat}}, Desa.{{$d->desa}}, Kec.{{$d->kecamatan}}. Prov.{{$d->provinsi}}
+                                </li>
+                                <li><span class="flaticon-communications-1"></span>{{$d->telepon}} </li>
+                                <li><span class="flaticon-graduated"></span>{{$d-> status_sekolah}}</li>
                             </ul>
-                            <a href="about.html" class="btn">More About Us</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <!-- about-img -->
                         <div class="about-img ">
                             <div class="about-font-img d-none d-lg-block">
-                                <img src="{{ asset('web/assets/img/gallery/about2.png') }}" alt="">
-                            </div>
-                            <div class="about-back-img ">
-                                <img src="{{ asset('web/assets/img/gallery/about1.png') }}" alt="">
+                                <img src="{{ asset('img/2.jpeg') }}" alt="" style="width: 100%">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
         <!-- About Law End-->
         <!--? Testimonial Start -->
+        @foreach ($data['profile'] as $d)
         <div class="testimonial-area fix pt-180 pb-180 section-bg"
             data-background="{{ asset('web/assets/img/gallery/section_bg03.png') }}">
             <div class="container">
@@ -607,50 +424,25 @@
                             <div class="single-testimonial pt-65">
                                 <!-- Testimonial tittle -->
                                 <div class="testimonial-icon mb-45">
-                                    <img src="{{ asset('web/assets/img/gallery/testimonial.png') }}"
-                                        class="ani-btn " alt="">
+                                    <img src="{{ asset('web/assets/img/gallery/testimonial.png') }}" class="ani-btn "
+                                        alt="">
                                 </div>
                                 <!-- Testimonial Content -->
                                 <div class="testimonial-caption text-center">
-                                    <p>You can’t succeed if you just do what others do and
-                                        follow the well-worn path. You need to create a new and
-                                        original path for yourself.</p>
-                                    <!-- Rattion -->
-                                    <div class="testimonial-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="rattiong-caption">
-                                        <span>Clifford Frazier<span> - Colorlib Themes</span> </span>
-                                    </div>
+                                    <p class="text-justify">{{$d->visi}}</p>
                                 </div>
                             </div>
                             <!-- Single Testimonial -->
                             <div class="single-testimonial pt-65">
                                 <!-- Testimonial tittle -->
                                 <div class="testimonial-icon mb-45">
-                                    <img src="{{ asset('web/assets/img/gallery/testimonial.png') }}"
-                                        class="ani-btn " alt="">
+                                    <img src="{{ asset('web/assets/img/gallery/testimonial.png') }}" class="ani-btn "
+                                        alt="">
                                 </div>
                                 <!-- Testimonial Content -->
                                 <div class="testimonial-caption text-center">
-                                    <p>You can’t succeed if you just do what others do and
-                                        follow the well-worn path. You need to create a new and
-                                        original path for yourself. </p>
+                                    <p class="text-justify">{{$d->misi}} </p>
                                     <!-- Rattion -->
-                                    <div class="testimonial-ratting">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="rattiong-caption">
-                                        <span>Clifford Frazier<span> - Colorlib Themes</span> </span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -658,6 +450,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
         <!-- Testimonial End -->
         <!--? Blog Area Start -->
         <div class="home-blog-area section-padding30">
@@ -666,52 +459,32 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle text-center mb-50">
-                            <span>Our Latest News From Our Blog</span>
-                            <h2>Latest News From Blog</h2>
+                            <span>Tentang Kegiatan Sekolah</span>
+                            <h2>Galeri Sekolah</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
+                    @foreach ($data['galeri'] as $d)
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="{{ asset('web/assets/img/gallery/home-blog1.png') }}" alt="">
+                                    <img src="{{ asset($d->path_file) }}" alt="">
                                     <!-- Blog date -->
                                     <div class="blog-date text-center">
-                                        <span>24</span>
-                                        <p>Now</p>
+                                        <span>{{date('d F Y', strToTime($d->created_at))}}</span>
+                                        <p>{{$d->jenis}}</p>
                                     </div>
                                 </div>
                                 <div class="blog-cap">
-                                    <p>| Properties</p>
-                                    <h3><a href="blog_details.html">Footprints in Time is perfect House in
-                                            Kurashiki</a></h3>
-                                    <a href="blog_details.html" class="more-btn">Read more »</a>
+                                    <p>|{{$d->jenis}}</p>
+                                    <p class="text-justify">{{$d->deskripsi}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <div class="home-blog-single mb-30">
-                            <div class="blog-img-cap">
-                                <div class="blog-img">
-                                    <img src="{{ asset('web/assets/img/gallery/home-blog2.png') }}" alt="">
-                                    <!-- Blog date -->
-                                    <div class="blog-date text-center">
-                                        <span>24</span>
-                                        <p>Now</p>
-                                    </div>
-                                </div>
-                                <div class="blog-cap">
-                                    <p>| Properties</p>
-                                    <h3><a href="blog_details.html">Footprints in Time is perfect House in
-                                            Kurashiki</a></h3>
-                                    <a href="blog_details.html" class="more-btn">Read more »</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -734,8 +507,7 @@
                                     <div id="mc_embed_signup">
                                         <form target="_blank"
                                             action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                            method="get" class="subscribe_form relative mail_part"
-                                            novalidate="true">
+                                            method="get" class="subscribe_form relative mail_part" novalidate="true">
                                             <input type="email" name="EMAIL" id="newsletter-form-email"
                                                 placeholder=" Email Address " class="placeholder hide-on-focus"
                                                 onfocus="this.placeholder = ''"
@@ -836,8 +608,8 @@
                                     Copyright &copy;
                                     <script>
                                         document.write(new Date().getFullYear());
-                                    </script> All rights reserved | This template is made with <i
-                                        class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                                    </script> All rights reserved | This template is made with <i class="fa fa-heart"
+                                        aria-hidden="true"></i> by <a href="https://colorlib.com"
                                         target="_blank">Colorlib</a>
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 </p>

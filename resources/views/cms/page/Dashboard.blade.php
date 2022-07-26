@@ -1,162 +1,162 @@
 @extends('cms.layout.TemplateAdmin')
 @section('content')
+<div class="row">
     <div class="row">
-        <div class="row">
-            <!-- product profit start -->
-            <div class="col-xl-3 col-md-6">
-                <div class="card prod-p-card bg-c-red">
-                    <div class="card-body">
-                        <div class="row align-items-center m-b-25">
-                            <div class="col">
-                                <h6 class="m-b-5 text-white">Data Guru</h6>
-                                <h3 class="m-b-0 text-white">{{ $data['jumlahguru'] }}</h3>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-user text-c-red f-18"></i>
-                            </div>
+        <!-- product profit start -->
+        <div class="col-xl-3 col-md-6">
+            <div class="card prod-p-card bg-c-red">
+                <div class="card-body">
+                    <div class="row align-items-center m-b-25">
+                        <div class="col">
+                            <h6 class="m-b-5 text-white">Data Guru</h6>
+                            <h3 class="m-b-0 text-white">{{ $data['jumlahguru'] }}</h3>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-user text-c-red f-18"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="card prod-p-card bg-c-blue">
-                    <div class="card-body">
-                        <div class="row align-items-center m-b-25">
-                            <div class="col">
-                                <h6 class="m-b-5 text-white">Data Siswa</h6>
-                                <h3 class="m-b-0 text-white">{{ $data['siswa'] }}</h3>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-users text-c-blue f-18"></i>
-                            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card prod-p-card bg-c-blue">
+                <div class="card-body">
+                    <div class="row align-items-center m-b-25">
+                        <div class="col">
+                            <h6 class="m-b-5 text-white">Data Siswa</h6>
+                            <h3 class="m-b-0 text-white">{{ $data['siswa'] }}</h3>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-users text-c-blue f-18"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="card prod-p-card bg-c-green">
-                    <div class="card-body">
-                        <div class="row align-items-center m-b-25">
-                            <div class="col">
-                                <h6 class="m-b-5 text-white">Fasilitas Sekolah</h6>
-                                <h3 class="m-b-0 text-white">{{ $data['fasilitas'] }}</h3>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-database text-c-green f-18"></i>
-                            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card prod-p-card bg-c-green">
+                <div class="card-body">
+                    <div class="row align-items-center m-b-25">
+                        <div class="col">
+                            <h6 class="m-b-5 text-white">Fasilitas Sekolah</h6>
+                            <h3 class="m-b-0 text-white">{{ $data['fasilitas'] }}</h3>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-database text-c-green f-18"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="card prod-p-card bg-c-yellow">
-                    <div class="card-body">
-                        <div class="row align-items-center m-b-25">
-                            <div class="col">
-                                <h6 class="m-b-5 text-white">Data Pendaftar</h6>
-                                <h3 class="m-b-0 text-white">{{ count($data['pendaftar']) }}</h3>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-users text-c-yellow f-18"></i>
-                            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card prod-p-card bg-c-yellow">
+                <div class="card-body">
+                    <div class="row align-items-center m-b-25">
+                        <div class="col">
+                            <h6 class="m-b-5 text-white">Data Pendaftar</h6>
+                            <h3 class="m-b-0 text-white">{{ count($data['pendaftar']) }}</h3>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-users text-c-yellow f-18"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- sessions-section start -->
-            <div class="col-xl-8 col-md-6">
-                <div class="card table-card">
-                    <div class="card-header">
-                        <h5>Data Siswa Baru</h5>
-                    </div>
-                    <div class="card-body px-0 py-0">
-                        <div class="table-responsive">
-                            <div class="session-scroll" style="height:478px;position:relative;">
-                                <table class="table table-hover m-b-0">
-                                    <thead>
-                                        <tr>
-                                            <th style="width: 50px;"><span>#</span></th>
-                                            <th><span>Tanggal Daftar</span></th>
-                                            <th><span>Nama Lengkap </span></th>
-                                            <th><span>Alamat </span></th>
-                                            <th><span>Status </span></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @php
-                                            $no = 1;
-                                        @endphp
-                                        @foreach ($data['pendaftar'] as $d)
-                                            <tr>
-                                                <td>{{ $no++ }}</td>
-                                                <td>
-                                                    {{ date('d F Y', strtotime($d->created_at)) }}
-                                                </td>
-                                                <td>
-                                                    {{ $d->nama_lengkap }}
-                                                </td>
-                                                <td>
-                                                    {{ $d->alamat }}
-                                                </td>
-                                                <td>
-                                                    Terdaftar
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
+        </div>
+        <!-- sessions-section start -->
+        <div class="col-xl-8 col-md-6">
+            <div class="card table-card">
+                <div class="card-header">
+                    <h5>Data Siswa Baru</h5>
+                </div>
+                <div class="card-body px-0 py-0">
+                    <div class="table-responsive">
+                        <div class="session-scroll" style="height:478px;position:relative;">
+                            <table class="table table-hover m-b-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 50px;"><span>#</span></th>
+                                        <th><span>Tanggal Daftar</span></th>
+                                        <th><span>Nama Lengkap </span></th>
+                                        <th><span>Alamat </span></th>
+                                        <th><span>Status </span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php
+                                    $no = 1;
+                                    @endphp
+                                    @foreach ($data['pendaftar'] as $d)
+                                    <tr>
+                                        <td>{{ $no++ }}</td>
+                                        <td>
+                                            {{ date('d F Y', strtotime($d->created_at)) }}
+                                        </td>
+                                        <td>
+                                            {{ $d->nama_lengkap }}
+                                        </td>
+                                        <td>
+                                            {{ $d->alamat }}
+                                        </td>
+                                        <td>
+                                            Terdaftar
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- sessions-section end -->
-            <div class="col-md-6 col-xl-4">
-                <div class="card user-card">
-                    <div class="card-header">
-                        <h5>Profile Sekolah</h5>
+        </div>
+        <!-- sessions-section end -->
+        <div class="col-md-6 col-xl-4">
+            <div class="card user-card">
+                <div class="card-header">
+                    <h5>Profile Sekolah</h5>
+                </div>
+                <div class="card-body  text-center">
+                    <div class="usre-image">
+                        <img src="{{ asset('img/2.jpeg') }}" class="wid-100 m-auto" alt="User-Profile-Image"
+                            style="width: 50%;">
                     </div>
-                    <div class="card-body  text-center">
-                        <div class="usre-image">
-                            <img src="{{ asset('img/2.jpeg') }}" class="wid-100 m-auto" alt="User-Profile-Image"
-                                style="width: 50%;">
-                        </div>
-                        <h6 class="f-w-600 m-t-25 m-b-10" id="profile">
-                            {{ $data['profile'] ? $data['profile']->nama_sekolah : '' }}</h6>
-                        <p>{{ $data['profile'] ? $data['profile']->nama_yayasan : '' }} |
-                            {{ $data['profile'] ? $data['profile']->status_sekolah : '' }} |
-                            {{ $data['profile'] ? $data['profile']->telepon : '' }}
-                        </p>
-                        <hr>
-                        <h6 class="f-w-600 m-t-25 m-b-10">Alamat</h6>
-                        <p>{{ $data['profile'] ? $data['profile']->alamat : '' }} |
-                            {{ $data['profile'] ? $data['profile']->desa : '' }} |
-                            {{ $data['profile'] ? $data['profile']->kecamatan : '' }} |
-                            {{ $data['profile'] ? $data['profile']->provinsi : '' }}
-                        </p>
-                        <hr>
-                        <div class="row justify-content-center user-social-link">
-                            <div class="col-auto">
-                                @if ($data['profile'])
-                                    <button type="button" id="btn-edit"
-                                        data-id="{{ $data['profile'] ? $data['profile']->id : '' }}"
-                                        class="btn btn-outline-success m-auto btn-md" data-toggle="modal"
-                                        data-target="#modalUniv">Ubah Profil</button>
-                                @else
-                                    <button type="button" id="btn-input" class="btn btn-outline-primary m-auto btn-md"
-                                        data-toggle="modal" data-target="#modalUniv">Input Profil</button>
-                                @endif
-                            </div>
+                    <h6 class="f-w-600 m-t-25 m-b-10" id="profile">
+                        {{ $data['profile'] ? $data['profile']->nama_sekolah : '' }}</h6>
+                    <p>{{ $data['profile'] ? $data['profile']->nama_yayasan : '' }} |
+                        {{ $data['profile'] ? $data['profile']->status_sekolah : '' }} |
+                        {{ $data['profile'] ? $data['profile']->telepon : '' }}
+                    </p>
+                    <hr>
+                    <h6 class="f-w-600 m-t-25 m-b-10">Alamat</h6>
+                    <p>{{ $data['profile'] ? $data['profile']->alamat : '' }} |
+                        {{ $data['profile'] ? $data['profile']->desa : '' }} |
+                        {{ $data['profile'] ? $data['profile']->kecamatan : '' }} |
+                        {{ $data['profile'] ? $data['profile']->provinsi : '' }}
+                    </p>
+                    <hr>
+                    <div class="row justify-content-center user-social-link">
+                        <div class="col-auto">
+                            @if ($data['profile'])
+                            <button type="button" id="btn-edit"
+                                data-id="{{ $data['profile'] ? $data['profile']->id : '' }}"
+                                class="btn btn-outline-success m-auto btn-md" data-toggle="modal"
+                                data-target="#modalUniv">Ubah Profil</button>
+                            @else
+                            <button type="button" id="btn-input" class="btn btn-outline-primary m-auto btn-md"
+                                data-toggle="modal" data-target="#modalUniv">Input Profil</button>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 @endsection
 @section('js')
-    <script>
-        $(document).ready(function() {
+<script>
+    $(document).ready(function() {
             const form = (data) => {
                 $('#form-update').append(`
             <ol type="A">
@@ -232,6 +232,16 @@
                                     <label class="col-sm-3 col-form-label">Status Sekolah</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" name="status_sekolah" value="${data ? data.status_sekolah : ''}">
+                                        <small class="text-danger" id="status_sekolah-alert"></small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Nama Kepala Sekolah</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" disabled value="{{$data['guru']->nama }}">
+                                        <input type="hidden" class="form-control" disabled name="nama_kepala_sekolah" value="{{$data['guru']->id }}">
                                         <small class="text-danger" id="status_sekolah-alert"></small>
                                     </div>
                                 </div>
@@ -332,5 +342,5 @@
             });
 
         });
-    </script>
+</script>
 @endsection
