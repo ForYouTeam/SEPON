@@ -95,7 +95,7 @@
                             </div>
                             <!-- Header-btn -->
                             <div class="header-search d-none d-lg-block">
-                                <h5>{{$data['profile'] ? $data['profile']->nama_sekolah : 'Sekolah Dasar Negeri 3 Palu'}}</h5>
+                                <h5>{{$data['profile'] ? $data['profile']->nama_sekolah : 'Sekolah Dasar Muhammadiyah 3 Palu'}}</h5>
                             </div>
                         </div>
                         <!-- Mobile Menu -->
