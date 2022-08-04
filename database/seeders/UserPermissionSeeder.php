@@ -25,8 +25,8 @@ class UserPermissionSeeder extends Seeder
 
         $suadmin = User::create([
             'nama' => 'super admin',
-            'email' => 'foryou@gmail.com',
-            'password' => Hash::make('12345')
+            'email' => 'superadmin@setdaproper.com',
+            'password' => Hash::make('nALbeles')
         ]);
 
         $suadmin->assignRole('super-admin');
