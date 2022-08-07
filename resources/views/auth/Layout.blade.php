@@ -35,7 +35,7 @@
             <div class="row align-items-center">
                 @yield('content')
                 <div class="col-md-6 d-none d-md-block">
-                    <img src="{{ asset('cms/assets/images/auth-bg.jpg') }}" alt="" class="img-fluid">
+                    <img src="{{ asset('cms/assets/images/auth-bg.jpeg') }}" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
