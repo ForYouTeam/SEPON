@@ -33,7 +33,7 @@
                                     <th>Nama Lengkap/Panggilan</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Tempat Tgl Lahir</th>
-                                    <th>Agama</th>
+                                    <th>Tahun Ajaran</th>
                                     <th>Foto</th>
                                     <th style="width: 15px;">Info Lanjut</th>
                                     <th style="width: 20px;">Opsi</th>
@@ -44,31 +44,33 @@
                                     $no = 1;
                                 @endphp
                                 @foreach ($data['pendaftar'] as $d)
-                                    <th>{{ $no++ }}</th>
-                                    <th>
+                                   <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>
                                         {{ $d->nama_lengkap }}
                                         <br>
                                         {{ $d->nama_panggilan }}
-                                    </th>
-                                    <th>{{ $d->jk }}</th>
-                                    <th>{{ $d->tempat_lahir }} {{ $d->tgl_lahir }}</th>
-                                    <th>{{ $d->agama }}</th>
-                                    <th>
+                                    </td>
+                                    <td>{{ $d->jk }}</td>
+                                    <td>{{ $d->tempat_lahir }} {{ $d->tgl_lahir }}</td>
+                                    <td>{{ $d->tahun_ajaran }}</td>
+                                    <td>
                                         <img src="{{ asset($d->path_img) }}" class="img-profile" alt="">
-                                    </th>
-                                    <th>
+                                    </td>
+                                    <td>
                                         <a href="{{ route('paper', $d->id) }}"
                                             onclick="window.open(this.href, 'mywin',
                                         'left=20,top=20,width=800,height=1200,toolbar=1,resizable=1'); return false;"
                                             id="btn-info" data-id="{{ $d->id }}" class="link-button"><i
                                                 class="feather icon-info"></i>
                                             Bukti Pendaftaran</a>
-                                    <th>
+                                    <td>
                                         <button id="btn-edit" data-id="{{ $d->id }}" type="button"
                                             class="btn btn-sm btn-secondary"><i class="far fa-edit"></i>Edit</button>
                                         <button id="btn-hapus" data-id="{{ $d->id }}"
                                             class="btn btn-sm btn-danger"><i class="fas fa-minus-square"></i>Hapus</button>
-                                    </th>
+                                    </td>
+                                   </tr>
                                 @endforeach
                             </tbody>
                         </table>

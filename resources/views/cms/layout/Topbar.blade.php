@@ -20,7 +20,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-notification">
                         <div class="pro-head">
-                            <img src="{{ asset('cms/assets/images/user/avatar-1.jpg') }}" class="img-radius"
+                            <img src="{{ asset('cms/assets/images/user/avatar-1.png') }}" class="img-radius"
                                 alt="User-Profile-Image">
                             <span>{{ Auth::user()->nama }}</span>
                             <a href="{{ route('logout') }}" class="dud-logout" title="Logout">
