@@ -165,7 +165,7 @@
                 </div>
                 <div class="row">
                     @if (count($data['fasilitas']) >= 1)
-                        @foreach ($data['fasilitas'] as $item)
+                        @foreach ($data['fasilitas'] as $d)
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-cat mb-50">
                                 <div class="cat-icon">
